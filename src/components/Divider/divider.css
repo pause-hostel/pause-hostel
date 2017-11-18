@@ -1,0 +1,21 @@
+.paw-icon {
+  height: 20px;
+  padding: 15px;
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.hr {
+  width: 40%;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  height: 1px;
+  background-color: black;
+}
