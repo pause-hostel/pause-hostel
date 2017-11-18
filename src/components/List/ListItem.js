@@ -13,9 +13,9 @@ const ListItem = ({ className, href, text, onClick }) => (
   </li>
 );
 ListItem.propTypes = {
-  className: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  text: PropTypes.string,
+  href: PropTypes.string,
   onClick: PropTypes.func //eslint-disable-line
 };
 export default ListItem;

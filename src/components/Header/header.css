@@ -1,0 +1,27 @@
+.header-container {
+  width: 100%;
+}
+
+.header-wrapper {
+  display: inline;
+}
+
+.header-image {
+  position: relative;
+  width: 50%;
+  height: 20%;
+}
+
+.header-text {
+  position: absolute;
+  color: #ffffff;
+  width: 50%;
+}
+
+h1 {
+  top: 200px;
+}
+
+h3 {
+  top: 235px;
+}

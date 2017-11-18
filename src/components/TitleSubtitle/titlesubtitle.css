@@ -1,0 +1,18 @@
+.title-container {
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #4fa89e;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  padding-bottom: 10px;
+}
+
+.section-subheading {
+  font-size: 16px;
+  color: #eb5a34;
+  font-weight: lighter;
+}
