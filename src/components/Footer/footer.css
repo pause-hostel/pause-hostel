@@ -1,0 +1,103 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+}
+
+.logo {
+  height: 120px;
+  padding-right: 40px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 70px 0 70px;
+}
+
+.link-wrapper {
+  width: 100%;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 0;
+  width: 100%;
+  align-items: center;
+  font-weight: lighter;
+  font-size: 16px;
+  color: #4fa89e;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+}
+
+.phone-icon {
+  padding-right: 10px;
+  height: 30px;
+}
+
+.social-icon {
+  height: 30px;
+  padding-right: 10px;
+}
+
+.nav-links {
+  padding-left: 0;
+  margin-bottom: 5px;
+}
+
+.nav-links a {
+  list-style: none;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #626262;
+}
+
+.nav-links li:not(:first-child) {
+  padding-left: 20px;
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  border-bottom: 1px solid #626262;
+}
+
+.book-button {
+  height: 30px;
+  width: 90px;
+  padding-top: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0;
+  border: none;
+  background-color: #dc3d50;
+  color: #ffffff;
+}
+
+.legal ul {
+  height: 50px;
+  background-color: #f2f1f0;
+  color: #4fa89e;
+  text-transform: uppercase;
+  font-weight: lighter;
+  list-style: none;
+  margin: 0;
+  font-size: 15px;
+  padding-top: 20px;
+}
