@@ -1,8 +1,6 @@
 import React from 'react';
 import '../../App.css';
 import {
-  Navigation,
-  Footer,
   Divider,
   Header,
   TitleSubtitle,
@@ -16,7 +14,6 @@ import {
 
 const Home = () => (
   <div className="App">
-    <Navigation />
     <Header />
     <TitleSubtitle />
     <Contents />
@@ -32,7 +29,6 @@ const Home = () => (
     <CarouselImages />
     <TitleSubtitle />
     <Banner />
-    <Footer />
   </div>
 );
 
