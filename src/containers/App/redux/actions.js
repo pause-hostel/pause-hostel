@@ -8,14 +8,14 @@ export const getNavItems = () => ({
   types: [NAV_ITEMS_LOAD, NAV_ITEMS_SUCCESS, NAV_ITEMS_FAILURE],
   payload: {
     request: {
-      url: 'navigation',
+      url: '/navigation',
     },
   },
 });
 
-export const navItemsSuccess = response => ({
+export const navItemsSuccess = ({ payload: data }) => ({
   type: NAV_ITEMS_SUCCESS,
-  payload: { response },
+  payload: { data },
 });
 
 export const navItemsFailure = error => ({
