@@ -10,4 +10,4 @@ export { default as CarouselImages } from './CarouselImages';
 export { default as Banner } from './Banner';
 export { default as Tours } from './Tours';
 export { default as PageHeader } from './PageHeader';
-export { default as LocationMap } from './LocationMap';
+export { default as Location } from './Location';

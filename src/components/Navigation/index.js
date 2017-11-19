@@ -16,12 +16,20 @@ const Navigation = () => (
           <p>Contact us directly at +52 (988) 347 47 89 (Mexico)</p>
         </div>
         <div>
-          <img
-            className="social-icon"
-            src="/facebook-icon.png"
-            alt="Facebook"
-          />
-          <img className="social-icon" src="/youtube-icon.png" alt="YouTube" />
+          <a href="https://www.facebook.com/pausehostel/">
+            <img
+              className="social-icon"
+              src="/facebook-icon.png"
+              alt="Facebook"
+            />
+          </a>
+          <a href="https://www.youtube.com/channel/UCPI0qzTwTstxbN4sAzGHhsg">
+            <img
+              className="social-icon"
+              src="/youtube-icon.png"
+              alt="YouTube"
+            />
+          </a>
         </div>
       </div>
       <ul className="nav-links">
