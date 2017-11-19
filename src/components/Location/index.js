@@ -10,7 +10,7 @@ const Location = ({ contents }) => (
         key={`location-${content.locationText}`}
       >
         <div className="directions-wrapper">
-          <a className="directions-button" href={contents.buttonHref}>
+          <a className="directions-button" href={content.buttonHref}>
             {content.buttonText}
           </a>
           <div className="directions-location">{content.locationText}</div>
