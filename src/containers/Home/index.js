@@ -5,7 +5,13 @@ import {
   Footer,
   Divider,
   Header,
-  TitleSubtitle
+  TitleSubtitle,
+  Contents,
+  RoomImages,
+  FacilitiesList,
+  CarouselImages,
+  Banner,
+  Tours
 } from '../../components';
 
 class Home extends Component {
@@ -15,7 +21,19 @@ class Home extends Component {
         <Navigation />
         <Header />
         <TitleSubtitle />
+        <Contents />
         <Divider />
+        <TitleSubtitle />
+        <RoomImages />
+        <Divider />
+        <TitleSubtitle />
+        <Tours />
+        <Divider />
+        <TitleSubtitle />
+        <FacilitiesList />
+        <CarouselImages />
+        <TitleSubtitle />
+        <Banner />
         <Footer />
       </div>
     );

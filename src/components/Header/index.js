@@ -5,12 +5,15 @@ import { headerContents } from './constants';
 
 const Header = ({ contents }) => {
   return (
-    <div className=".header-container">
+    <div className="header-container">
       {contents.map(content => (
         <div className="header-wrapper">
           <img className="header-image" src={content.src} alt="" />
-          <h1 className="header-text">{content.headerText}</h1>
-          <h3 className="header-text">{content.headerSub}</h3>
+          <div className="header-text-main">{content.headerText}</div>
+          <div className="header-text-sub">{content.headerSub}</div>
+          <a className="book-button-header" href={CONTACT_PAGE}>
+            Book Now
+          </a>
         </div>
       ))}
     </div>
