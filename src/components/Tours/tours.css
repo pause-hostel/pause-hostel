@@ -1,0 +1,47 @@
+.tour-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tour-wrapper {
+  position: relative;
+}
+
+.tour-image {
+  display: block;
+  height: 350px;
+  padding: 30px 20px;
+}
+
+.tour-title {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.tour-location {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.tour-description {
+  font-size: 16px;
+  width: 350px;
+  color: #626262;
+  font-weight: lighter;
+  margin: 0 auto;
+}

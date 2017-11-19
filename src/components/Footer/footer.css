@@ -79,13 +79,12 @@
 }
 
 .book-button {
-  height: 30px;
-  width: 90px;
-  padding-top: 15px;
-  font-size: 12px;
+  padding: 20px 15px;
+  font-size: 13px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
+  letter-spacing: 1.5px;
   border-radius: 0;
   border: none;
   background-color: #dc3d50;

@@ -1,0 +1,15 @@
+.facilities-list ul {
+  display: flex;
+  flex-flow: wrap column;
+  max-height: 150px;
+  text-align: left;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.facilities-list li {
+  line-height: 1.5;
+  list-style-type: disc;
+  font-weight: lighter;
+  color: #626262;
+}
