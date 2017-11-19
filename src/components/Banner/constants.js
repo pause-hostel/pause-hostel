@@ -1,1 +1,2 @@
-export const bannerImage = [{ src: '/foundation.png' }];
+const bannerImage = [{ src: '/foundation.png' }];
+export default bannerImage;

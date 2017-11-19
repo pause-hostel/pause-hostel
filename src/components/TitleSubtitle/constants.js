@@ -1,9 +1,9 @@
-export const titleSubtitleContents = [
+const titleSubtitleContents = [
   {
     heading: 'Welcome to your own paradise!',
     subHeading:
-      'Perfect locations to explore the best of the Mayas Peninsula and Barrior Reef'
-  }
+      'Perfect locations to explore the best of the Mayas Peninsula and Barrior Reef',
+  },
   // {
   //   heading: 'Rooms and dorms',
   //   subHeading: 'Equiped with AirCon + WiFi + Bathroom'
@@ -22,3 +22,5 @@ export const titleSubtitleContents = [
   //     'We are a hostel with a cause! Stay with us and support these organizations'
   // }
 ];
+
+export default titleSubtitleContents;

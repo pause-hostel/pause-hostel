@@ -1,7 +1,7 @@
 import React from 'react';
 import './facilitiesList.css';
 import ListWrapper from '../List/ListWrapper';
-import { facilitesListContents } from './constants';
+import facilitesListContents from './constants';
 
 const FacilitiesList = () => (
   <div>
@@ -12,7 +12,7 @@ const FacilitiesList = () => (
 );
 
 FacilitiesList.defaultProps = {
-  contents: facilitesListContents
+  contents: facilitesListContents,
 };
 
 export default FacilitiesList;

@@ -16,6 +16,12 @@ ListItem.propTypes = {
   className: PropTypes.string,
   text: PropTypes.string,
   href: PropTypes.string,
-  onClick: PropTypes.func //eslint-disable-line
+  onClick: PropTypes.func, //eslint-disable-line
+};
+ListItem.defaultProps = {
+  className: '',
+  text: '',
+  href: '',
+  onClick: () => {},
 };
 export default ListItem;

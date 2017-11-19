@@ -2,7 +2,7 @@ import React from 'react';
 import './navigation.css';
 import { ROOT } from '../../routes';
 import ListWrapper from '../List/ListWrapper';
-import { navigationLinks } from './constants';
+import navigationLinks from './constants';
 
 const Navigation = () => (
   <div className="nav-container">

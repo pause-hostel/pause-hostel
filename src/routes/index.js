@@ -1,5 +1,5 @@
-export const ROOT = "/hostelsite";
-export const MEXICO_PAGE = "/hostelsite/chetumal";
-export const ABOUT_PAGE = "/hostelsite/about";
-export const BELIZE_PAGE = "/hostelsite/cayecaulker";
-export const CONTACT_PAGE = "/hostelsite/contact";
+export const ROOT = '/newsite';
+export const MEXICO_PAGE = '/newsite/chetumal';
+export const ABOUT_PAGE = '/newsite/about';
+export const BELIZE_PAGE = '/newsite/cayecaulker';
+export const CONTACT_PAGE = '/newsite/contact';

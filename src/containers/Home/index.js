@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../../App.css';
 import {
   Navigation,
@@ -11,33 +11,29 @@ import {
   FacilitiesList,
   CarouselImages,
   Banner,
-  Tours
+  Tours,
 } from '../../components';
 
-class Home extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Navigation />
-        <Header />
-        <TitleSubtitle />
-        <Contents />
-        <Divider />
-        <TitleSubtitle />
-        <RoomImages />
-        <Divider />
-        <TitleSubtitle />
-        <Tours />
-        <Divider />
-        <TitleSubtitle />
-        <FacilitiesList />
-        <CarouselImages />
-        <TitleSubtitle />
-        <Banner />
-        <Footer />
-      </div>
-    );
-  }
-}
+const Home = () => (
+  <div className="App">
+    <Navigation />
+    <Header />
+    <TitleSubtitle />
+    <Contents />
+    <Divider />
+    <TitleSubtitle />
+    <RoomImages />
+    <Divider />
+    <TitleSubtitle />
+    <Tours />
+    <Divider />
+    <TitleSubtitle />
+    <FacilitiesList />
+    <CarouselImages />
+    <TitleSubtitle />
+    <Banner />
+    <Footer />
+  </div>
+);
 
 export default Home;

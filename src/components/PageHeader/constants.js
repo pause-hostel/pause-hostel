@@ -1,7 +1,9 @@
-export const pageHeaderContents = [
+const pageHeaderContents = [
   {
-    src: './chetumal-header.png',
+    src: '/chetumal-header.png',
     pageHeaderText: 'Hostel Calderitas',
-    pageHeaderSub: 'Chetumal - Mexico'
-  }
+    pageHeaderSub: 'Chetumal - Mexico',
+  },
 ];
+
+export default pageHeaderContents;

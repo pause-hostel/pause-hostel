@@ -17,10 +17,10 @@ const ListWrapper = ({ className, items }) => (
   </div>
 );
 ListWrapper.defaultProps = {
-  items: []
+  items: [],
 };
 ListWrapper.propTypes = {
   className: PropTypes.string, //eslint-disable-line
-  items: PropTypes.array //eslint-disable-line
+  items: PropTypes.array, //eslint-disable-line
 };
 export default ListWrapper;
