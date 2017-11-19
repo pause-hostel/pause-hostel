@@ -53,3 +53,7 @@
   background-color: #dc3d50;
   color: #ffffff;
 }
+
+.book-button-page-header:hover {
+  background-color: #b03040;
+}

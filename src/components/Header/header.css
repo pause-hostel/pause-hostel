@@ -20,6 +20,10 @@
   width: 100%;
 }
 
+.header-image:hover {
+  opacity: 0.7;
+}
+
 .header-text-main {
   position: absolute;
   top: 70%;
@@ -59,6 +63,10 @@
   border: none;
   background-color: #dc3d50;
   color: #ffffff;
+}
+
+.book-button-header:hover {
+  background-color: #b03040;
 }
 
 @media (max-width: 850px) {

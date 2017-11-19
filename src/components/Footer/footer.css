@@ -91,6 +91,10 @@
   color: #ffffff;
 }
 
+.book-button:hover {
+  background-color: #b03040;
+}
+
 .legal ul {
   height: 50px;
   background-color: #f2f1f0;

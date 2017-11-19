@@ -1,0 +1,57 @@
+.location-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.directions-wrapper {
+  text-align: left;
+  padding: 15px;
+  max-width: 40%;
+}
+
+.directions-button {
+  padding: 15px 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-radius: 0;
+  border: none;
+  background-color: #eb5a34;
+  color: #ffffff;
+}
+
+.directions-button:hover {
+  background-color: #c33713;
+}
+
+.directions-location {
+  font-size: 30px;
+  font-weight: bold;
+  color: #4fa89e;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  padding: 30px 0 5px 0;
+}
+
+.directions-address {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: lighter;
+  color: #626262;
+  padding-bottom: 20px;
+}
+
+.directions-description {
+  line-height: 1.5;
+  font-weight: lighter;
+  color: #626262;
+  text-align: left;
+}
