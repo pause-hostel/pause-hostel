@@ -1,29 +1,40 @@
 import React from 'react';
 import './navigation.css';
 import { ROOT } from '../../routes';
-import ListWrapper from '../List/ListWrapper';
-import navigationLinks from './constants';
 
-const Navigation = () => (
+const Navigation = ({
+  navitem1_text,
+  navitem2_text,
+  navitem3_text,
+  navitem4_text,
+  navitem1_location,
+  navitem2_location,
+  navitem3_location,
+  navitem4_location,
+  navimage,
+  navitem_facebook,
+  navitem_youtube,
+  navitem_phone,
+}) => (
   <div className="nav-container">
     <a href={ROOT}>
-      <img className="logo" src="/pause-logo.png" alt="Pause Hostels" />
+      <img className="logo" src={navimage.src} alt={navimage.alt} />
     </a>
     <div className="link-wrapper">
       <div className="contact-info">
         <div className="phone">
           <img className="phone-icon" src="/phone-icon.png" alt="Contact" />
-          <p>Contact us directly at +52 (988) 347 47 89 (Mexico)</p>
+          <p>Contact us directly at {navitem_phone}</p>
         </div>
         <div>
-          <a href="https://www.facebook.com/pausehostel/">
+          <a href={navitem_facebook}>
             <img
               className="social-icon"
               src="/facebook-icon.png"
               alt="Facebook"
             />
           </a>
-          <a href="https://www.youtube.com/channel/UCPI0qzTwTstxbN4sAzGHhsg">
+          <a href={navitem_youtube}>
             <img
               className="social-icon"
               src="/youtube-icon.png"
@@ -33,7 +44,18 @@ const Navigation = () => (
         </div>
       </div>
       <ul className="nav-links">
-        <ListWrapper items={navigationLinks} />
+        <li>
+          <a href={navitem1_location}>{navitem1_text}</a>
+        </li>
+        <li>
+          <a href={navitem2_location}>{navitem2_text}</a>
+        </li>
+        <li>
+          <a href={navitem3_location}>{navitem3_text}</a>
+        </li>
+        <li>
+          <a href={navitem4_location}>{navitem4_text}</a>
+        </li>
       </ul>
     </div>
   </div>
