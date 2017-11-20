@@ -43,20 +43,22 @@ const Navigation = ({
           </a>
         </div>
       </div>
-      <ul className="nav-links">
-        <li>
-          <a href={navitem1_location}>{navitem1_text}</a>
-        </li>
-        <li>
-          <a href={navitem2_location}>{navitem2_text}</a>
-        </li>
-        <li>
-          <a href={navitem3_location}>{navitem3_text}</a>
-        </li>
-        <li>
-          <a href={navitem4_location}>{navitem4_text}</a>
-        </li>
-      </ul>
+      <div className="nav-links">
+        <ul>
+          <li>
+            <a href={navitem1_location}>{navitem1_text}</a>
+          </li>
+          <li>
+            <a href={navitem2_location}>{navitem2_text}</a>
+          </li>
+          <li>
+            <a href={navitem3_location}>{navitem3_text}</a>
+          </li>
+          <li>
+            <a href={navitem4_location}>{navitem4_text}</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 );
