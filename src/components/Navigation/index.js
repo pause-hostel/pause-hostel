@@ -11,14 +11,14 @@ const Navigation = ({
   navitem2_location,
   navitem3_location,
   navitem4_location,
-  navimage,
+  nav_image,
   navitem_facebook,
   navitem_youtube,
   navitem_phone,
 }) => (
   <div className="nav-container">
     <a href={ROOT}>
-      <img className="logo" src={navimage.src} alt={navimage.alt} />
+      <img className="logo" src={nav_image.url} alt={nav_image.alt} />
     </a>
     <div className="link-wrapper">
       <div className="contact-info">

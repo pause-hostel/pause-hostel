@@ -29,11 +29,12 @@ class App extends Component {
     this.props.getNavItems();
   }
   render() {
+    const { navItems } = this.props;
     return (
       <div>
         {!this.props.loading ? (
           <div>
-            <Navigation />
+            <Navigation {...navItems} />
             <BrowserRouter>
               <Switch>
                 <Route exact path={ROOT} component={Home} />
