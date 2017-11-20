@@ -29,11 +29,12 @@ class App extends Component {
     this.props.getNavItems();
   }
   render() {
+    const { navItems } = this.props;
     return (
       <div>
         {!this.props.loading ? (
           <div>
-            <Navigation />
+            <Navigation {...navItems} />
             <BrowserRouter>
               <Switch>
                 <Route exact path={ROOT} component={Home} />
@@ -55,7 +56,7 @@ class App extends Component {
 }
 App.propTypes = {
   loading: PropTypes.bool.isRequired,
-  navItems: PropTypes.array.isRequired, //eslint-disable-line
+  navItems: PropTypes.object.isRequired, //eslint-disable-line
   getNavItems: PropTypes.func.isRequired,
 };
 const mapStateToProps = state => ({
@@ -69,5 +70,4 @@ const mapDispatchToProps = dispatch =>
     },
     dispatch,
   );
-
 export default connect(mapStateToProps, mapDispatchToProps)(App);

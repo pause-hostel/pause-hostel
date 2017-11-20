@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   loading: true,
-  navItems: [],
+  navItems: {},
 };
 
 function navigationReducer(state = initialState, action) {
@@ -14,14 +14,11 @@ function navigationReducer(state = initialState, action) {
     case NAV_ITEMS_LOAD:
       return { ...state, loading: true };
 
-    // Do something when request start ...
-    // @response meta is action.meta
-    // @response $uid is action.meta.$uid
-    // @response $requestOptions is action.meta.$requestOptions (if in config set `debug` is true)
-
-    case NAV_ITEMS_SUCCESS:
-      console.log(action);
-      return { ...state, loading: false };
+    case NAV_ITEMS_SUCCESS: {
+      const { data } = action.payload;
+      const { acf } = data[0];
+      return { ...state, loading: false, navItems: acf || [] };
+    }
 
     case NAV_ITEMS_FAILURE:
       return { ...state, loading: false, error: '' };
