@@ -39,6 +39,19 @@ const Footer = () => (
         <ul className="nav-links">
           <ListWrapper items={navigationLinks} />
         </ul>
+        <a className="book-button-mobile" href={CONTACT_PAGE}>
+          Book Now
+        </a>
+        <div className="contact-info-mobile">
+          <div className="phone">
+            <img
+              className="phone-icon-mobile"
+              src="/phone-icon.png"
+              alt="Contact"
+            />
+            <p>Call us:+394839483098430</p>
+          </div>
+        </div>
       </div>
     </div>
     <div className="legal">

@@ -24,7 +24,7 @@ const Navigation = ({
       <div className="contact-info">
         <div className="phone">
           <img className="phone-icon" src="/phone-icon.png" alt="Contact" />
-          <p>Contact us directly at {navitem_phone}</p>
+          <p>Contact us directly on {navitem_phone}</p>
         </div>
         <div>
           <a href={navitem_facebook}>
@@ -58,6 +58,16 @@ const Navigation = ({
             <a href={navitem4_location}>{navitem4_text}</a>
           </li>
         </ul>
+      </div>
+      <div className="contact-info-mobile">
+        <div className="phone">
+          <img
+            className="phone-icon-mobile"
+            src="/phone-icon.png"
+            alt="Contact"
+          />
+          <p>Call us: {navitem_phone}</p>
+        </div>
       </div>
     </div>
   </div>
