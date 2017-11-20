@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { getNavItems } from './redux/actions';
-import { Navigation, Footer } from '../../components';
+import { Navigation, Footer, LoadingWrapper, NotFound } from '../../components';
 import {
   ROOT,
   MEXICO_PAGE,
@@ -21,8 +21,6 @@ import Mexico from '../Mexico';
 import About from '../About';
 import Belize from '../Belize';
 import Contact from '../Contact';
-
-const NoMatch = () => <div> Route not found </div>;
 
 class App extends Component {
   componentWillMount() {
@@ -42,13 +40,13 @@ class App extends Component {
                 <Route path={ABOUT_PAGE} component={About} />
                 <Route path={BELIZE_PAGE} component={Belize} />
                 <Route path={CONTACT_PAGE} component={Contact} />
-                <Route component={NoMatch} />
+                <Route component={NotFound} />
               </Switch>
             </BrowserRouter>
             <Footer />
           </div>
         ) : (
-          <div> Loading </div>
+          <LoadingWrapper />
         )}
       </div>
     );
