@@ -9,7 +9,7 @@ const NotFound = () => (
       Sorry, looks like the dog ate this page!
     </div>
     <a className="notfound-link" href={ROOT}>
-      Click here to go back home.
+      Click here to go back home
     </a>
   </div>
 );

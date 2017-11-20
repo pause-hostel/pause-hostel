@@ -27,12 +27,12 @@ class App extends Component {
     this.props.getNavItems();
   }
   render() {
-    const { navItems } = this.props;
+    const { navItems: { navigation_items } } = this.props;
     return (
       <div>
         {!this.props.loading ? (
           <div>
-            <Navigation {...navItems} />
+            <Navigation {...navigation_items} />
             <BrowserRouter>
               <Switch>
                 <Route exact path={ROOT} component={Home} />

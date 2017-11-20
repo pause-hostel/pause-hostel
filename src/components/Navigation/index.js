@@ -3,38 +3,31 @@ import './navigation.css';
 import { ROOT } from '../../routes';
 
 const Navigation = ({
-  navitem1_text,
-  navitem2_text,
-  navitem3_text,
-  navitem4_text,
-  navitem1_location,
-  navitem2_location,
-  navitem3_location,
-  navitem4_location,
+  nav_items,
   nav_image,
-  navitem_facebook,
-  navitem_youtube,
-  navitem_phone,
+  facebook_url,
+  youtube_url,
+  phone,
 }) => (
   <div className="nav-container">
     <a href={ROOT}>
-      <img className="logo" src={nav_image.url} alt={nav_image.alt} />
+      <img className="logo" src={nav_image} alt="Pause Hostels" />
     </a>
     <div className="link-wrapper">
       <div className="contact-info">
         <div className="phone">
           <img className="phone-icon" src="/phone-icon.png" alt="Contact" />
-          <p>Contact us directly on {navitem_phone}</p>
+          <p>Contact us directly on {phone}</p>
         </div>
         <div>
-          <a href={navitem_facebook}>
+          <a href={facebook_url}>
             <img
               className="social-icon"
               src="/facebook-icon.png"
               alt="Facebook"
             />
           </a>
-          <a href={navitem_youtube}>
+          <a href={youtube_url}>
             <img
               className="social-icon"
               src="/youtube-icon.png"
@@ -45,18 +38,11 @@ const Navigation = ({
       </div>
       <div className="nav-links">
         <ul>
-          <li>
-            <a href={navitem1_location}>{navitem1_text}</a>
-          </li>
-          <li>
-            <a href={navitem2_location}>{navitem2_text}</a>
-          </li>
-          <li>
-            <a href={navitem3_location}>{navitem3_text}</a>
-          </li>
-          <li>
-            <a href={navitem4_location}>{navitem4_text}</a>
-          </li>
+          {nav_items.map(({ nav_item }) => (
+            <li>
+              <a href={nav_item.url}>{nav_item.title}</a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="contact-info-mobile">
@@ -66,7 +52,7 @@ const Navigation = ({
             src="/phone-icon.png"
             alt="Contact"
           />
-          <p>Call us: {navitem_phone}</p>
+          <p>Call us: {phone}</p>
         </div>
       </div>
     </div>
