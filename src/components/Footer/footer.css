@@ -23,6 +23,7 @@
 .contact-info {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 15px 0;
   width: 100%;
@@ -91,8 +92,17 @@
   color: #ffffff;
 }
 
+.book-button-mobile {
+  display: none;
+}
+
 .book-button:hover {
   background-color: #b03040;
+}
+
+.legal {
+  text-align: center;
+  width: 100%;
 }
 
 .legal ul {
@@ -105,4 +115,28 @@
   margin: 0;
   font-size: 15px;
   padding-top: 20px;
+}
+
+@media (max-width: 805px) {
+  .legal {
+    padding-left: 0;
+  }
+  .legal ul {
+    font-size: 12px;
+  }
+  .book-button-mobile {
+    display: block;
+    max-width: 90px;
+    margin: 10px auto;
+    padding: 20px 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-radius: 0;
+    border: none;
+    background-color: #dc3d50;
+    color: #ffffff;
+  }
 }
