@@ -11,3 +11,5 @@ export { default as Banner } from './Banner';
 export { default as Tours } from './Tours';
 export { default as PageHeader } from './PageHeader';
 export { default as Location } from './Location';
+export { default as LoadingWrapper } from './Loading';
+export { default as NotFound } from './NotFound';
