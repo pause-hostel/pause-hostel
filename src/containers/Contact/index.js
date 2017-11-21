@@ -5,8 +5,8 @@ import { bindActionCreators } from 'redux';
 import { getContactItems } from './redux/actions';
 import {
   Banner,
-  // Divider,
-  // Location,
+  Divider,
+  Location,
   TitleSubtitle,
   Contents,
   LoadingWrapper,
@@ -20,7 +20,11 @@ class Contact extends Component {
     if (this.props.loading) {
       return <LoadingWrapper />;
     }
-    const { contact_banner, welcome_content } = this.props.contactItems;
+    const {
+      contact_banner,
+      welcome_content,
+      directions,
+    } = this.props.contactItems;
     return (
       <div>
         <Banner bannerImage={contact_banner} />
@@ -29,6 +33,9 @@ class Contact extends Component {
           subtitleText={welcome_content.welcome_subtitle}
         />
         <Contents contentText={welcome_content.welcome_paragraph} />
+        {Object.values(directions).map(direction => (
+          <Location {...direction} />
+        ))}
       </div>
     );
   }
