@@ -43,7 +43,7 @@ class App extends Component {
                 <Route component={NotFound} />
               </Switch>
             </BrowserRouter>
-            <Footer />
+            <Footer {...navigation_items} />
           </div>
         ) : (
           <LoadingWrapper />

@@ -5,6 +5,7 @@ import home from '../containers/Home/redux/reducer';
 import about from '../containers/About/redux/reducer';
 import mexico from '../containers/Mexico/redux/reducer';
 import belize from '../containers/Belize/redux/reducer';
+import contact from '../containers/Contact/redux/reducer';
 
 export default combineReducers({
   router: routerReducer,
@@ -13,4 +14,5 @@ export default combineReducers({
   about,
   mexico,
   belize,
+  contact,
 });

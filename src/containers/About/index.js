@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getAboutItems } from './redux/actions';
 import {
-  PageHeader,
   Divider,
   TitleSubtitle,
   Contents,
@@ -23,7 +22,10 @@ class About extends Component {
     const { banner, welcome_content, about_sponsor } = this.props.aboutItems;
     return (
       <div>
-        <Banner bannerImage={banner.banner_image} />
+        <Banner
+          bannerImage={banner.banner_image}
+          bookButton={banner.book_button}
+        />
         <TitleSubtitle
           titleText={welcome_content.welcome_title}
           subtitleText={welcome_content.welcome_subtitle}
