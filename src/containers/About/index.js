@@ -23,7 +23,7 @@ class About extends Component {
     const { banner, welcome_content, about_sponsor } = this.props.aboutItems;
     return (
       <div>
-        <PageHeader pageHeaderContents={banner} />
+        <Banner bannerImage={banner.banner_image} />
         <TitleSubtitle
           titleText={welcome_content.welcome_title}
           subtitleText={welcome_content.welcome_subtitle}

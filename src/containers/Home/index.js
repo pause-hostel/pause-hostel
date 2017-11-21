@@ -56,7 +56,7 @@ class Home extends Component {
         <Divider />
         <TitleSubtitle
           titleText={facilities.facilities_title}
-          subtitleText={facilities.facilities_title}
+          subtitleText={facilities.facilities_subtitle}
         />
         <FacilitiesList facilityItems={facilities.facility_items} />
         <CarouselImages galleryImages={gallery} />
