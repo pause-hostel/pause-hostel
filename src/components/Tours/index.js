@@ -1,22 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './tours.css';
-import tourContents from './constants';
 
-const Tours = ({ contents }) => (
+const Tours = ({ activityItems }) => (
   <div className="tour-container">
-    {contents.map((content, idx) => (
-      <div className="tour-wrapper" key={`tours-${idx}`}>
-        <img className="tour-image" src={content.src} alt="" />
-        <div className="tour-title">{content.tourTitle}</div>
-        <div className="tour-location">{content.tourLocation}</div>
-        <div className="tour-description">{content.tourDescription}</div>
+    {Object.values(activityItems).map(activity => (
+      <div className="tour-wrapper" key={`tours-${activity.activity_title}`}>
+        <img className="tour-image" src={activity.activity_image} alt="" />
+        <div className="tour-title">{activity.activity_title}</div>
+        <div className="tour-location">{activity.activity_subtitle}</div>
+        <div className="tour-description">{activity.activity_summary}</div>
       </div>
     ))}
   </div>
 );
 
-Tours.defaultProps = {
-  contents: tourContents,
+Tours.PropTypes = {
+  activityItems: PropTypes.object,
 };
 
 export default Tours;

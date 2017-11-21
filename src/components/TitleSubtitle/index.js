@@ -1,20 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './titlesubtitle.css';
-import titleSubtitleContents from './constants';
 
-const TitleSubtitle = ({ contents }) => (
+const TitleSubtitle = ({ titleText, subtitleText }) => (
   <div className="title-container">
-    {contents.map(content => (
-      <div key={`titielSub-${content.heading}`}>
-        <div className="section-heading">{content.heading}</div>
-        <div className="section-subheading">{content.subHeading}</div>
-      </div>
-    ))}
+    <div key={`titleSubtitle-${titleText}`}>
+      <div className="section-heading">{titleText}</div>
+      <div className="section-subheading">{subtitleText}</div>
+    </div>
   </div>
 );
 
-TitleSubtitle.defaultProps = {
-  contents: titleSubtitleContents,
+TitleSubtitle.PropTypes = {
+  titleText: PropTypes.string,
+  subtitleText: PropTypes.string,
 };
 
 export default TitleSubtitle;

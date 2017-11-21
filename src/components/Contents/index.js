@@ -1,21 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './contents.css';
-import contentsText from './constants';
 
-const Contents = ({ contents }) => (
-  <div>
-    {contents.map(content => (
-      <div
-        key={`contents-${content.text}`}
-        className="contents"
-        dangerouslySetInnerHTML={{ __html: content.text }}
-      />
-    ))}
-  </div>
+const Contents = ({ contentText }) => (
+  <div
+    key={`contents-${contentText}`}
+    className="contents"
+    dangerouslySetInnerHTML={{ __html: contentText }}
+  />
 );
 
-Contents.defaultProps = {
-  contents: contentsText,
+Contents.PropTypes = {
+  contentText: PropTypes.string,
 };
 
 export default Contents;

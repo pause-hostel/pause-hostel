@@ -1,29 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './roomImages.css';
-import roomImagesContents from './constants';
 import { CONTACT_PAGE } from '../../routes';
 
-const RoomImages = ({ contents }) => (
+const RoomImages = ({ rooms }) => (
   <div className="room-container">
-    {contents.map(content => (
-      <div className="room-wrapper" key={`room-${content.src}`}>
-        <img className="room-image" src={content.src} alt="" />
-        {content.buttonText ? (
+    {Object.values(rooms).map(room => (
+      <div className="room-wrapper" key={`room-${room.room_image}`}>
+        <img className="room-image" src={room.room_image} alt="" />
+        {room.button_text ? (
           <a className="book-button-room" href={CONTACT_PAGE}>
-            {content.buttonText}
+            {room.button_text}
           </a>
         ) : null}
-        <div className="room-type">{content.roomType}</div>
-        {content.roomLocation ? (
-          <div className="room-location">{content.roomLocation}</div>
+        <div className="room-type">{room.room_title}</div>
+        {room.room_subtitle ? (
+          <div className="room-location">{room.room_subtitle}</div>
         ) : null}
       </div>
     ))}
   </div>
 );
 
-RoomImages.defaultProps = {
-  contents: roomImagesContents,
+RoomImages.PropTypes = {
+  rooms: PropTypes.object,
 };
 
 export default RoomImages;
