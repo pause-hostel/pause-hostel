@@ -1,6 +1,7 @@
 .banner {
   max-height: 400px;
   width: 100%;
+  display: grid;
 }
 
 .banner-image {
