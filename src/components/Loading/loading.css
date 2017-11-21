@@ -1,6 +1,7 @@
 .loading-container {
-  position: absolute;
+  position: block;
   left: 50%;
+  margin-top: -50px;
   margin-left: -50px;
   opacity: 0.7;
 }

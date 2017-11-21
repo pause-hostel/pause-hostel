@@ -5,7 +5,8 @@ import headerContents from './constants';
 
 const Header = ({ contents }) => (
   <div className="header-container">
-    {contents.map(content => (
+    {Object.values(contents).map(content => (
+      //eslint-disable-line
       <div className="header-wrapper" key={`header-${content.src}`}>
         <a href={content.href}>
           <img className="header-image" src={content.src} alt="" />

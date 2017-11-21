@@ -2,9 +2,11 @@
   display: flex;
   flex-flow: wrap column;
   max-height: 150px;
+  max-width: 60%;
   text-align: left;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 30px;
+  margin: 0 auto;
 }
 
 .facilities-list li {
@@ -12,4 +14,12 @@
   list-style-type: disc;
   font-weight: lighter;
   color: #626262;
+}
+
+@media (max-width: 900px) {
+  .facilities-list ul {
+    max-height: 100%;
+    flex-flow: column;
+    max-width: 40%;
+  }
 }

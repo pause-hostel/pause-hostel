@@ -13,13 +13,13 @@
 
 .tour-image {
   display: block;
-  height: 350px;
+  max-width: 350px;
   padding: 30px 20px;
 }
 
 .tour-title {
   position: absolute;
-  top: 60%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -30,7 +30,7 @@
 
 .tour-location {
   position: absolute;
-  top: 72%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
