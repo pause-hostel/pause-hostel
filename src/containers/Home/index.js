@@ -21,49 +21,50 @@ class Home extends Component {
     this.props.getHomeItems();
   }
   render() {
-    return !this.props.loading ? (
+    if (this.props.loading) {
+      return <LoadingWrapper />;
+    }
+    const {
+      welcome_content,
+      room_content,
+      tours_activities,
+      facilities,
+      gallery,
+      sponsors,
+    } = this.props.homeItems;
+    return (
       <div>
         <Header />
         <TitleSubtitle
-          titleText={this.props.homeItems.welcome_content.welcome_title}
-          subtitleText={this.props.homeItems.welcome_content.welcome_subtitle}
+          titleText={welcome_content.welcome_title}
+          subtitleText={welcome_content.welcome_subtitle}
         />
-        <Contents
-          contentText={this.props.homeItems.welcome_content.welcome_paragraph}
-        />
+        <Contents contentText={welcome_content.welcome_paragraph} />
         <Divider />
         <TitleSubtitle
-          titleText={this.props.homeItems.room_content.room_section_title}
-          subtitleText={this.props.homeItems.room_content.room_section_subtitle}
+          titleText={room_content.room_section_title}
+          subtitleText={room_content.room_section_subtitle}
         />
-        <RoomImages rooms={this.props.homeItems.room_content.rooms} />
+        <RoomImages rooms={room_content.rooms} />
         <Divider />
         <TitleSubtitle
-          titleText={this.props.homeItems.tours_activities.activities_title}
-          subtitleText={
-            this.props.homeItems.tours_activities.activities_subtitle
-          }
+          titleText={tours_activities.activities_title}
+          subtitleText={tours_activities.activities_subtitle}
         />
-        <Tours
-          activityItems={this.props.homeItems.tours_activities.activities}
-        />
+        <Tours activityItems={tours_activities.activities} />
         <Divider />
         <TitleSubtitle
-          titleText={this.props.homeItems.facilities.facilities_title}
-          subtitleText={this.props.homeItems.facilities.facilities_title}
+          titleText={facilities.facilities_title}
+          subtitleText={facilities.facilities_title}
         />
-        <FacilitiesList
-          facilityItems={this.props.homeItems.facilities.facility_items}
-        />
-        <CarouselImages />
+        <FacilitiesList facilityItems={facilities.facility_items} />
+        <CarouselImages galleryImages={gallery} />
         <TitleSubtitle
-          titleText={this.props.homeItems.welcome_content.welcome_title}
-          subtitleText={this.props.homeItems.welcome_content.welcome_subtitle}
+          titleText={sponsors.sponsor_title}
+          subtitleText={sponsors.sponsor_subtitle}
         />
-        <Banner />
+        <Banner bannerImage={sponsors.sponsor_banner} />
       </div>
-    ) : (
-      <LoadingWrapper />
     );
   }
 }

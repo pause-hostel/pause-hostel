@@ -1,19 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './banner.css';
-import bannerImage from './constants';
 
-const Banner = ({ images }) => (
-  <div>
-    {images.map(image => (
-      <div className="banner" key={`banner-${image.src}`}>
-        <img src={image.src} className="banner-image" alt="" />
-      </div>
-    ))}
+const Banner = ({ bannerImage }) => (
+  <div className="banner">
+    <img src={bannerImage} className="banner-image" alt="" />
   </div>
 );
 
-Banner.defaultProps = {
-  images: bannerImage,
+Banner.PropTypes = {
+  bannerImage: PropTypes.string,
 };
 
 export default Banner;
