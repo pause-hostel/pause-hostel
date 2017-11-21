@@ -5,8 +5,8 @@ import './facilitiesList.css';
 const FacilitiesList = ({ facilityItems }) => (
   <div className="facilities-list">
     <ul>
-      {Object.values(facilityItems).map(facilityItem => (
-        <li>{facilityItem.facility_item}</li>
+      {Object.values(facilityItems).map((facilityItem, idx) => (
+        <li key={`items-fac-${idx}`}>{facilityItem.facility_item}</li>
       ))}
     </ul>
   </div>

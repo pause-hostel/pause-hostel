@@ -38,8 +38,8 @@ const Navigation = ({
       </div>
       <div className="nav-links">
         <ul>
-          {nav_items.map(({ nav_item }) => (
-            <li>
+          {nav_items.map(({ nav_item }, idx) => (
+            <li key={`navitems-${idx}`}>
               <a href={nav_item.url}>{nav_item.title}</a>
             </li>
           ))}
