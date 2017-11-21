@@ -1,24 +1,42 @@
-import React from 'react';
-import {
-  Navigation,
-  PageHeader,
-  Divider,
-  Footer,
-  RoomImages,
-  Location,
-} from '../../components';
-import roomPage from './constants';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getMexicoItems } from './redux/actions';
+import HostelTemplate from '../../components/HostelTemplate';
+import { LoadingWrapper } from '../../components';
 
-const Mexico = () => (
-  <div className="App">
-    <Navigation />
-    <PageHeader />
-    <Divider />
-    <RoomImages contents={roomPage} />
-    <Divider />
-    <Location />
-    <Footer />
-  </div>
-);
+class Mexico extends Component {
+  componentWillMount() {
+    this.props.getMexicoItems();
+  }
+  render() {
+    if (this.props.loading) {
+      return <LoadingWrapper />;
+    }
+    return (
+      <div className="App">
+        <HostelTemplate {...this.props.mexicoItems} />
+      </div>
+    );
+  }
+}
 
-export default Mexico;
+Mexico.propTypes = {
+  loading: PropTypes.bool.isRequired,
+  mexicoItems: PropTypes.object.isRequired, //eslint-disable-line
+  getMexicoItems: PropTypes.func.isRequired,
+};
+const mapStateToProps = state => ({
+  loading: state.mexico.loading,
+  mexicoItems: state.mexico.mexicoItems,
+});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      getMexicoItems,
+    },
+    dispatch,
+  );
+
+export default connect(mapStateToProps, mapDispatchToProps)(Mexico);

@@ -1,40 +1,49 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './location.css';
-import locationContent from './constants';
 
-const Location = ({ contents }) => (
+const Location = ({
+  direction_button,
+  hostel_location,
+  hostel_address,
+  hostel_directions,
+  google_map_url,
+}) => (
   <div>
-    {contents.map(content => (
-      <div
-        className="location-container"
-        key={`location-${content.locationText}`}
-      >
-        <div className="directions-wrapper">
-          <a className="directions-button" href={content.buttonHref}>
-            {content.buttonText}
-          </a>
-          <div className="directions-location">{content.locationText}</div>
-          <div className="directions-address">{content.addressText}</div>
-          <div className="directions-description">
-            {content.descriptionText}
-          </div>
-        </div>
-        <iframe
-          src={content.mapURL}
-          width="550"
-          height="300"
-          frameBorder="0"
-          allowFullScreen
-          title="Hostel Map"
-          alt=""
-        />
+    <div className="location-container">
+      <div className="directions-wrapper">
+        <a className="directions-button" href={direction_button.url}>
+          {direction_button.title}
+        </a>
+        <div className="directions-location">{hostel_location}</div>
+        <div className="directions-address">{hostel_address}</div>
+        <div className="directions-description">{hostel_directions}</div>
       </div>
-    ))}
+      <iframe
+        src={google_map_url}
+        width="550"
+        height="300"
+        frameBorder="0"
+        allowFullScreen
+        title="Hostel Map"
+        alt=""
+      />
+    </div>
   </div>
 );
-
+Location.propTypes = {
+  direction_button: PropTypes.object, //eslint-disable-line
+  hostel_location: PropTypes.string,
+  hostel_address: PropTypes.string,
+  hostel_directions: PropTypes.string,
+  google_map_url: PropTypes.string,
+};
 Location.defaultProps = {
-  contents: locationContent,
+  direction_button: {},
+  hostel_location: '',
+  hostel_address: '',
+  hostel_directions: '',
+  google_map_url: '',
 };
 
 export default Location;

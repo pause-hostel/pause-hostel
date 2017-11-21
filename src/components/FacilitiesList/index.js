@@ -5,15 +5,18 @@ import './facilitiesList.css';
 const FacilitiesList = ({ facilityItems }) => (
   <div className="facilities-list">
     <ul>
-      {Object.values(facilityItems).map((facilityItem, idx) => (
+      {facilityItems.map((facilityItem, idx) => (
         <li key={`items-fac-${idx}`}>{facilityItem.facility_item}</li>
       ))}
     </ul>
   </div>
 );
 
-FacilitiesList.PropTypes = {
-  facilityItems: PropTypes.object,
+FacilitiesList.propTypes = {
+  facilityItems: PropTypes.array, //eslint-disable-line
+};
+FacilitiesList.defaultProps = {
+  facilityItems: [],
 };
 
 export default FacilitiesList;

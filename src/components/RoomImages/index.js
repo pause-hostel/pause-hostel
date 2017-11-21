@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './roomImages.css';
-import { CONTACT_PAGE } from '../../routes';
 
 const RoomImages = ({ rooms }) => (
   <div className="room-container">
-    {Object.values(rooms).map(room => (
-      <div className="room-wrapper" key={`room-${room.room_image}`}>
+    {Object.values(rooms).map((room, idx) => (
+      <div className="room-wrapper" key={`room-${idx}`}>
         <img className="room-image" src={room.room_image} alt="" />
-        {room.button_text ? (
-          <a className="book-button-room" href={CONTACT_PAGE}>
-            {room.button_text}
+        {room.book_button ? (
+          <a className="book-button-room" href={room.book_button.url}>
+            {room.book_button.title}
           </a>
         ) : null}
         <div className="room-type">{room.room_title}</div>
@@ -22,8 +21,11 @@ const RoomImages = ({ rooms }) => (
   </div>
 );
 
-RoomImages.PropTypes = {
-  rooms: PropTypes.object,
+RoomImages.propTypes = {
+  rooms: PropTypes.object, //eslint-disable-line
+};
+RoomImages.defaultProps = {
+  rooms: {},
 };
 
 export default RoomImages;
