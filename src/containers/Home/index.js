@@ -25,6 +25,7 @@ class Home extends Component {
       return <LoadingWrapper />;
     }
     const {
+      hostels,
       welcome_content,
       room_content,
       tours_activities,
@@ -34,7 +35,7 @@ class Home extends Component {
     } = this.props.homeItems;
     return (
       <div>
-        <Header />
+        <Header contents={hostels} />
         <TitleSubtitle
           titleText={welcome_content.welcome_title}
           subtitleText={welcome_content.welcome_subtitle}
