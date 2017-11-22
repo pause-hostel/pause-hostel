@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { pawImage } from '../../images';
+import { notFoundImage } from '../../images';
 
 import './notFound.css';
 import { ROOT } from '../../routes';
 
 const NotFound = () => (
   <div className="notfound-container">
-    <img className="notfound-image" src={pawImage} alt="Loading" />
+    <img className="notfound-image" src={notFoundImage} alt="Loading" />
     <div className="notfound-text">
       Sorry, looks like the dog ate this page!
     </div>
