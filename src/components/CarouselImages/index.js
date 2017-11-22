@@ -7,7 +7,7 @@ import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'; //es
 
 const CarouselImages = ({ galleryImages }) => (
   <Carousel autoPlay showThumbs={false} showStatus={false} infiniteLoop>
-    {Object.values(galleryImages).map(image => (
+    {galleryImages.map(image => (
       <div key={`carouselImages-${image.id}`}>
         <img
           className="carousel-image"
@@ -20,10 +20,10 @@ const CarouselImages = ({ galleryImages }) => (
 );
 
 CarouselImages.propTypes = {
-  galleryImages: PropTypes.object, //eslint-disable-line
+  galleryImages: PropTypes.array, //eslint-disable-line
 };
 CarouselImages.defaultProps = {
-  galleryImages: {}, //eslint-disable-line
+  galleryImages: [], //eslint-disable-line
 };
 
 export default CarouselImages;
