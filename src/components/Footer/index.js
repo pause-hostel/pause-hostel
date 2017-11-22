@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './footer.css';
 import { ROOT, CONTACT_PAGE } from '../../routes';
 
@@ -30,22 +32,22 @@ const Footer = ({ nav_items, nav_image, facebook_url, youtube_url, phone }) => (
               />
             </a>
           </div>
-          <a className="book-button" href={CONTACT_PAGE}>
+          <Link className="book-button" to={CONTACT_PAGE}>
             Book Now
-          </a>
+          </Link>
         </div>
         <div className="nav-links">
           <ul>
             {nav_items.map(({ nav_item }, idx) => (
               <li key={`navitems-${idx}`}>
-                <a href={nav_item.url}>{nav_item.title}</a>
+                <Link to={nav_item.url}>{nav_item.title}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <a className="book-button-mobile" href={CONTACT_PAGE}>
+        <Link className="book-button-mobile" to={CONTACT_PAGE}>
           Book Now
-        </a>
+        </Link>
         <div className="contact-info-mobile">
           <div className="phone">
             <img

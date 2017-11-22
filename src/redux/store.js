@@ -17,7 +17,6 @@ const client = axios.create({
   baseURL: config.apiEndpoint,
   responseType: 'json',
 });
-
 const initialState = {};
 const enhancers = [];
 const middleware = [thunk, routerMiddleware(history), axiosMiddleware(client)];

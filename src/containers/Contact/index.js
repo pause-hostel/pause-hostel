@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { getContactItems } from './redux/actions';
 import {
   Banner,
-  Divider,
   Location,
   TitleSubtitle,
   Contents,
@@ -14,7 +13,10 @@ import {
 
 class Contact extends Component {
   componentWillMount() {
-    this.props.getContactItems();
+    const { contactItems } = this.props;
+    if (Object.keys(contactItems).length <= 0) {
+      this.props.getContactItems();
+    }
   }
   render() {
     if (this.props.loading) {

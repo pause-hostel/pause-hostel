@@ -8,7 +8,10 @@ import { LoadingWrapper } from '../../components';
 
 class Belize extends Component {
   componentWillMount() {
-    this.props.getBelizeItems();
+    const { belizeItems } = this.props;
+    if (Object.keys(belizeItems).length <= 0) {
+      this.props.getBelizeItems();
+    }
   }
   render() {
     if (this.props.loading) {

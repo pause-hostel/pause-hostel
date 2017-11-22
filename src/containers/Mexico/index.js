@@ -8,7 +8,10 @@ import { LoadingWrapper } from '../../components';
 
 class Mexico extends Component {
   componentWillMount() {
-    this.props.getMexicoItems();
+    const { mexicoItems } = this.props;
+    if (Object.keys(mexicoItems).length <= 0) {
+      this.props.getMexicoItems();
+    }
   }
   render() {
     if (this.props.loading) {

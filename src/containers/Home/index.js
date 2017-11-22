@@ -18,7 +18,10 @@ import {
 
 class Home extends Component {
   componentWillMount() {
-    this.props.getHomeItems();
+    const { homeItems } = this.props;
+    if (Object.keys(homeItems).length <= 0) {
+      this.props.getHomeItems();
+    }
   }
   render() {
     if (this.props.loading) {
