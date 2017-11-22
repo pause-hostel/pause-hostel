@@ -59,7 +59,7 @@ const Footer = ({ nav_items, nav_image, facebook_url, youtube_url, phone }) => (
       </div>
     </div>
     <div className="legal">
-      <p>Pause Hostels/Mexico/Belize/All Rights Reserved 2017</p>
+      Pause Hostels/Mexico/Belize/All Rights Reserved 2017
     </div>
   </div>
 );
