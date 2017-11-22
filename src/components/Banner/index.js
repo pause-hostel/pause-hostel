@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './banner.css';
 
 const Banner = ({ bannerImage, bookButton }) => (
@@ -10,9 +11,9 @@ const Banner = ({ bannerImage, bookButton }) => (
       alt=""
     />
     {bookButton.title ? (
-      <a className="book-button-banner" href={bookButton.url}>
+      <Link className="book-button-banner" to={bookButton.url}>
         {bookButton.title}
-      </a>
+      </Link>
     ) : null}
   </div>
 );

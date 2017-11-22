@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './notFound.css';
 import { ROOT } from '../../routes';
 
@@ -8,9 +9,9 @@ const NotFound = () => (
     <div className="notfound-text">
       Sorry, looks like the dog ate this page!
     </div>
-    <a className="notfound-link" href={ROOT}>
+    <Link className="notfound-link" to={ROOT}>
       Click here to go back home
-    </a>
+    </Link>
   </div>
 );
 

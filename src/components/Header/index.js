@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './header.css';
 
 const Header = ({ contents }) => (
@@ -11,18 +12,18 @@ const Header = ({ contents }) => (
           className="header-wrapper"
           key={`header-${image_text.image_title}`}
         >
-          <a href={image_location}>
+          <Link to={image_location}>
             <div
               className="header-image"
               style={{ backgroundImage: `url(${hostel_image})` }}
               alt=""
             />
-          </a>
+          </Link>
           <div className="header-text-main">{image_text.image_title}</div>
           <div className="header-text-sub">{image_text.image_subtitle}</div>
-          <a className="book-button-header" href={book_button.url}>
+          <Link className="book-button-header" to={book_button.url}>
             {book_button.title}
-          </a>
+          </Link>
         </div>
       );
     })}

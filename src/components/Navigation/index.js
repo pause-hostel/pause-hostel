@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navigation.css';
 import { ROOT } from '../../routes';
 
@@ -10,9 +11,9 @@ const Navigation = ({
   phone,
 }) => (
   <div className="nav-container">
-    <a href={ROOT}>
+    <Link to={ROOT}>
       <img className="logo" src={nav_image} alt="Pause Hostels" />
-    </a>
+    </Link>
     <div className="link-wrapper">
       <div className="contact-info">
         <div className="phone">
@@ -40,7 +41,7 @@ const Navigation = ({
         <ul>
           {nav_items.map(({ nav_item }, idx) => (
             <li key={`navitems-${idx}`}>
-              <a href={nav_item.url}>{nav_item.title}</a>
+              <Link to={nav_item.url}>{nav_item.title}</Link>
             </li>
           ))}
         </ul>

@@ -24,7 +24,10 @@ import Contact from '../Contact';
 
 class App extends Component {
   componentWillMount() {
-    this.props.getNavItems();
+    const { navItems } = this.props;
+    if (Object.keys(navItems).length <= 0) {
+      this.props.getNavItems();
+    }
   }
   render() {
     const { navItems: { navigation_items } } = this.props;
@@ -32,18 +35,20 @@ class App extends Component {
       <div>
         {!this.props.loading ? (
           <div>
-            <Navigation {...navigation_items} />
             <BrowserRouter>
-              <Switch>
-                <Route exact path={ROOT} component={Home} />
-                <Route path={MEXICO_PAGE} component={Mexico} />
-                <Route path={ABOUT_PAGE} component={About} />
-                <Route path={BELIZE_PAGE} component={Belize} />
-                <Route path={CONTACT_PAGE} component={Contact} />
-                <Route component={NotFound} />
-              </Switch>
+              <div>
+                <Navigation {...navigation_items} />
+                <Switch>
+                  <Route exact path={ROOT} component={Home} />
+                  <Route path={MEXICO_PAGE} component={Mexico} />
+                  <Route path={ABOUT_PAGE} component={About} />
+                  <Route path={BELIZE_PAGE} component={Belize} />
+                  <Route path={CONTACT_PAGE} component={Contact} />
+                  <Route component={NotFound} />
+                </Switch>
+                <Footer {...navigation_items} />
+              </div>
             </BrowserRouter>
-            <Footer {...navigation_items} />
           </div>
         ) : (
           <LoadingWrapper />

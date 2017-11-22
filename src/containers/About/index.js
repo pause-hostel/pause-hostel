@@ -13,7 +13,10 @@ import {
 
 class About extends Component {
   componentWillMount() {
-    this.props.getAboutItems();
+    const { aboutItems } = this.props;
+    if (Object.keys(aboutItems).length <= 0) {
+      this.props.getAboutItems();
+    }
   }
   render() {
     if (this.props.loading) {
