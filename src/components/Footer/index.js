@@ -63,6 +63,13 @@ const Footer = ({ nav_items, nav_image, facebook_url, youtube_url, phone }) => (
     <div className="legal">
       Pause Hostels/Mexico/Belize/All Rights Reserved 2017
     </div>
+    <div className="credits">
+      <p>
+        Site made with &hearts; by
+        <a href="https://github.com/stephanieinez"> Steph</a> &
+        <a href="https://github.com/grady-lad"> Martin</a>
+      </p>
+    </div>
   </div>
 );
 
