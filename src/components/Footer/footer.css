@@ -103,7 +103,7 @@
 .legal {
   text-align: center;
   width: 100%;
-  height: 50px;
+  height: 40px;
   background-color: #f2f1f0;
   color: #4fa89e;
   text-transform: uppercase;
@@ -114,12 +114,31 @@
   padding-top: 20px;
 }
 
+.credits {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  color: #dc3d50;
+  text-transform: uppercase;
+  font-weight: lighter;
+  list-style: none;
+  margin: 0;
+  font-size: 15px;
+}
+
+.credits a {
+  text-decoration: none;
+  font-weight: normal;
+  color: #dc3d50;
+}
+
+.credits a:hover {
+  font-weight: bold;
+}
+
 @media (max-width: 805px) {
   .legal {
-    padding-left: 0;
-  }
-  .legal ul {
-    font-size: 12px;
+    padding-top: 5px;
   }
   .book-button-mobile {
     display: block;
