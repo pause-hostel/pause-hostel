@@ -26,10 +26,12 @@ class About extends Component {
           bannerImage={banner.banner_image}
           bookButton={banner.book_button}
         />
-        <TitleSubtitle
-          titleText={welcome_content.welcome_title}
-          subtitleText={welcome_content.welcome_subtitle}
-        />
+        <div className="about-title">
+          <TitleSubtitle
+            titleText={welcome_content.welcome_title}
+            subtitleText={welcome_content.welcome_subtitle}
+          />
+        </div>
         <Contents contentText={welcome_content.welcome_paragraph} />
         <Divider />
         <TitleSubtitle

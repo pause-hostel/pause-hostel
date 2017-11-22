@@ -9,12 +9,17 @@
 
 .tour-wrapper {
   position: relative;
+  padding: 20px;
 }
 
 .tour-image {
   display: block;
-  max-width: 350px;
-  padding: 30px 20px;
+  width: 350px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-style: none;
 }
 
 .tour-title {
@@ -24,7 +29,7 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  font-size: 26px;
+  font-size: 23px;
   font-weight: bold;
 }
 
@@ -40,8 +45,22 @@
 
 .tour-description {
   font-size: 16px;
-  width: 350px;
+  max-width: 275px;
   color: #626262;
   font-weight: lighter;
   margin: 0 auto;
+  padding-top: 10px;
+}
+
+@media (max-width: 400px) {
+  .tour-image {
+    width: 275px;
+    height: 180px;
+  }
+  .tour-title {
+    font-size: 20px;
+  }
+  .tour-location {
+    font-size: 14px;
+  }
 }

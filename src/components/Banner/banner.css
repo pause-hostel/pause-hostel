@@ -8,7 +8,11 @@
 
 .banner-image {
   width: 100%;
-  max-height: 400px;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-style: none;
 }
 
 .book-button-banner {
@@ -30,4 +34,16 @@
 
 .book-button-banner:hover {
   background-color: #b03040;
+}
+
+@media (max-width: 850px) {
+  .banner-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner-image {
+    height: 150px;
+  }
 }

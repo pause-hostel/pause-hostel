@@ -16,8 +16,12 @@
 
 .header-image {
   display: block;
-  max-height: 500px;
+  height: 500px;
   width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-style: none;
 }
 
 .header-image:hover {
@@ -75,5 +79,14 @@
   }
   .header-text-sub {
     font-size: 14px;
+  }
+  .header-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-image {
+    height: 300px;
   }
 }

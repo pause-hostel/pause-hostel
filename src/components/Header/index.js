@@ -1,15 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './header.css';
-import headerContents from './constants';
 
 const Header = ({ contents }) => (
   <div className="header-container">
-    {Object.values(contents).map((content, idx) => {
+    {Object.values(contents).map((content) => {
       const { hostel_image, image_location, image_text, book_button } = content;
       return (
-        <div className="header-wrapper" key={`header-${idx}`}>
+        <div
+          className="header-wrapper"
+          key={`header-${image_text.image_title}`}
+        >
           <a href={image_location}>
-            <img className="header-image" src={hostel_image} alt="" />
+            <div
+              className="header-image"
+              style={{ backgroundImage: `url(${hostel_image})` }}
+              alt=""
+            />
           </a>
           <div className="header-text-main">{image_text.image_title}</div>
           <div className="header-text-sub">{image_text.image_subtitle}</div>
@@ -22,8 +29,11 @@ const Header = ({ contents }) => (
   </div>
 );
 
+Header.propTypes = {
+  contents: PropTypes.object, //eslint-disable-line
+};
 Header.defaultProps = {
-  contents: headerContents,
+  contents: {}, //eslint-disable-line
 };
 
 export default Header;

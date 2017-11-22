@@ -55,3 +55,59 @@
   color: #626262;
   text-align: left;
 }
+
+.directions-map {
+  width: 550px;
+  height: 300px;
+}
+
+.directions-button-mobile {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .directions-wrapper {
+    max-width: 81%;
+  }
+}
+
+@media (max-width: 400px) {
+  .location-container {
+    justify-content: flex-start;
+    padding: 15px;
+  }
+  .directions-location {
+    font-size: 24px;
+    padding: 0 0 5px 0;
+  }
+  .directions-address {
+    font-size: 18px;
+  }
+  .directions-map {
+    width: 285px;
+    height: 300px;
+    padding-top: 20px;
+    margin-left: 15px;
+  }
+  .directions-button {
+    display: none;
+  }
+  .directions-button-mobile {
+    padding: 15px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-radius: 0;
+    border: none;
+    background-color: #eb5a34;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    margin-left: 15px;
+  }
+  .directions-button-mobile:hover {
+    background-color: #c33713;
+  }
+}
