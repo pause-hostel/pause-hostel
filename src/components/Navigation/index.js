@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { youtubeImage, facebookImage, callImage } from '../../images';
+
 import './navigation.css';
 import { ROOT } from '../../routes';
 
@@ -17,23 +19,15 @@ const Navigation = ({
     <div className="link-wrapper">
       <div className="contact-info">
         <div className="phone">
-          <img className="phone-icon" src="/phone-icon.png" alt="Contact" />
+          <img className="phone-icon" src={callImage} alt="Contact" />
           <p>Contact us directly on {phone}</p>
         </div>
         <div>
           <a href={facebook_url}>
-            <img
-              className="social-icon"
-              src="/facebook-icon.png"
-              alt="Facebook"
-            />
+            <img className="social-icon" src={facebookImage} alt="Facebook" />
           </a>
           <a href={youtube_url}>
-            <img
-              className="social-icon"
-              src="/youtube-icon.png"
-              alt="YouTube"
-            />
+            <img className="social-icon" src={youtubeImage} alt="YouTube" />
           </a>
         </div>
       </div>
@@ -48,11 +42,7 @@ const Navigation = ({
       </div>
       <div className="contact-info-mobile">
         <div className="phone">
-          <img
-            className="phone-icon-mobile"
-            src="/phone-icon.png"
-            alt="Contact"
-          />
+          <img className="phone-icon-mobile" src={callImage} alt="Contact" />
           <p>Call us: {phone}</p>
         </div>
       </div>
