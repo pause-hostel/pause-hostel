@@ -2,9 +2,10 @@
   display: flex;
   flex-flow: wrap column;
   max-height: 150px;
-  max-width: 60%;
+  max-width: 70%;
   text-align: left;
   align-items: flex-start;
+  align-content: space-between;
   padding-bottom: 30px;
   margin: 0 auto;
 }
@@ -16,6 +17,11 @@
   color: #626262;
 }
 
+@media (max-width: 600px) {
+  .facilities-list ul {
+    max-width: 70% !important;
+  }
+}
 @media (max-width: 900px) {
   .facilities-list ul {
     max-height: 100%;
