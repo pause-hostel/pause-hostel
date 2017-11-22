@@ -21,9 +21,9 @@ const Header = ({ contents }) => (
           </Link>
           <div className="header-text-main">{image_text.image_title}</div>
           <div className="header-text-sub">{image_text.image_subtitle}</div>
-          <Link className="book-button-header" to={book_button.url}>
+          <a className="book-button-header" href={book_button.url}>
             {book_button.title}
-          </Link>
+          </a>
         </div>
       );
     })}

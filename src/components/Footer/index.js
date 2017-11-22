@@ -8,9 +8,9 @@ import { youtubeImage, facebookImage } from '../../images';
 const Footer = ({ nav_items, nav_image, facebook_url, youtube_url, phone }) => (
   <div className="footer">
     <div className="nav-container">
-      <a href={ROOT}>
+      <Link to={ROOT}>
         <img className="logo" src={nav_image} alt="Pause Hostels" />
-      </a>
+      </Link>
       <div className="link-wrapper">
         <div className="contact-info">
           <div className="phone">
