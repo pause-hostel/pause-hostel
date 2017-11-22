@@ -35,7 +35,7 @@ const Navigation = ({
         <ul>
           {nav_items.map(({ nav_item }, idx) => (
             <li key={`navitems-${idx}`}>
-              <Link to={nav_item.url}>{nav_item.title}</Link>
+              <Link to={`/newsite${nav_item.url}`}>{nav_item.title}</Link>
             </li>
           ))}
         </ul>

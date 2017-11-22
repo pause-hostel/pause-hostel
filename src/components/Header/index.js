@@ -12,7 +12,7 @@ const Header = ({ contents }) => (
           className="header-wrapper"
           key={`header-${image_text.image_title}`}
         >
-          <Link to={image_location}>
+          <Link to={`/newsite${image_location}`}>
             <div
               className="header-image"
               style={{ backgroundImage: `url(${hostel_image})` }}
