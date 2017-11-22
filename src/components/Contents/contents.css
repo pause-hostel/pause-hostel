@@ -7,6 +7,16 @@
   padding: 20px 0;
 }
 
+.contents a {
+  text-decoration: none;
+  color: #eb5a34;
+}
+
+.contents a:hover,
+.contents a:visited {
+  font-weight: bold;
+}
+
 @media (max-width: 400px) {
   .contents {
     max-width: 80%;
