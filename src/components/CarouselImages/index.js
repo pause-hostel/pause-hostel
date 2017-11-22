@@ -15,8 +15,11 @@ const CarouselImages = ({ galleryImages }) => (
   </Carousel>
 );
 
-CarouselImages.PropTypes = {
-  galleryImages: PropTypes.object,
+CarouselImages.propTypes = {
+  galleryImages: PropTypes.object, //eslint-disable-line
+};
+CarouselImages.defaultProps = {
+  galleryImages: {}, //eslint-disable-line
 };
 
 export default CarouselImages;

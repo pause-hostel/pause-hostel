@@ -6,3 +6,10 @@
   color: #626262;
   padding: 20px 0;
 }
+
+@media (max-width: 400px) {
+  .contents {
+    max-width: 80%;
+    text-align: left;
+  }
+}

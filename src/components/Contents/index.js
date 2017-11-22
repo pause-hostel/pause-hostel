@@ -6,12 +6,15 @@ const Contents = ({ contentText }) => (
   <div
     key={`contents-${contentText}`}
     className="contents"
-    dangerouslySetInnerHTML={{ __html: contentText }}
+    dangerouslySetInnerHTML={{ __html: contentText }} //eslint-disable-line
   />
 );
 
-Contents.PropTypes = {
+Contents.propTypes = {
   contentText: PropTypes.string,
+};
+Contents.defaultProps = {
+  contentText: '', //eslint-disable-line
 };
 
 export default Contents;

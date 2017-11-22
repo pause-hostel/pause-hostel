@@ -4,7 +4,11 @@ import './banner.css';
 
 const Banner = ({ bannerImage, bookButton }) => (
   <div className="banner">
-    <img src={bannerImage} className="banner-image" alt="" />
+    <div
+      className="banner-image"
+      style={{ backgroundImage: `url(${bannerImage})` }}
+      alt=""
+    />
     {bookButton.title ? (
       <a className="book-button-banner" href={bookButton.url}>
         {bookButton.title}

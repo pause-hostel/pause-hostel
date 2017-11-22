@@ -19,10 +19,12 @@ const Location = ({
         <div className="directions-address">{hostel_address}</div>
         <div className="directions-description">{hostel_directions}</div>
       </div>
+      <a className="directions-button-mobile" href={direction_button.url}>
+        {direction_button.title}
+      </a>
       <iframe
         src={google_map_url}
-        width="550"
-        height="300"
+        className="directions-map"
         frameBorder="0"
         allowFullScreen
         title="Hostel Map"
