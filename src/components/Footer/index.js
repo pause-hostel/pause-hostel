@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './footer.css';
 import { ROOT, CONTACT_PAGE } from '../../routes';
+import { youtubeImage, facebookImage } from '../../images';
 
 const Footer = ({ nav_items, nav_image, facebook_url, youtube_url, phone }) => (
   <div className="footer">
@@ -18,18 +19,10 @@ const Footer = ({ nav_items, nav_image, facebook_url, youtube_url, phone }) => (
           </div>
           <div>
             <a href={facebook_url}>
-              <img
-                className="social-icon"
-                src="/facebook-icon.png"
-                alt="Facebook"
-              />
+              <img className="social-icon" src={facebookImage} alt="Facebook" />
             </a>
             <a href={youtube_url}>
-              <img
-                className="social-icon"
-                src="/youtube-icon.png"
-                alt="YouTube"
-              />
+              <img className="social-icon" src={youtubeImage} alt="YouTube" />
             </a>
           </div>
           <Link className="book-button" to={CONTACT_PAGE}>
