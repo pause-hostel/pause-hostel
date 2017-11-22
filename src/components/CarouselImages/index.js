@@ -8,8 +8,12 @@ import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'; //es
 const CarouselImages = ({ galleryImages }) => (
   <Carousel autoPlay showThumbs={false} showStatus={false} infiniteLoop>
     {Object.values(galleryImages).map(image => (
-      <div className="carousel-images" key={`carouselImages-${image.id}`}>
-        <img src={image.url} alt="" />
+      <div key={`carouselImages-${image.id}`}>
+        <img
+          className="carousel-image"
+          style={{ backgroundImage: `url(${image.url})` }}
+          alt=""
+        />
       </div>
     ))}
   </Carousel>

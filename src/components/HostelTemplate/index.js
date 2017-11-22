@@ -36,7 +36,6 @@ const HostelTemplate = ({
     <FacilitiesList facilityItems={facilities.facility_items} />
     <Divider />
     <Location {...hostel_location} />
-    <Divider />
     <CarouselImages galleryImages={gallery} />
   </div>
 );
