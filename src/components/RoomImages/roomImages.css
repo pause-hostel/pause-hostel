@@ -11,6 +11,7 @@
 }
 
 .room-image {
+  position: static;
   display: block;
   height: 250px;
   padding: 15px;
