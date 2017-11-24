@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazyload';
+
 import {
   PageHeader,
   Divider,
@@ -27,7 +29,9 @@ const HostelTemplate = ({
     />
     <Contents contentText={welcome_content.welcome_paragraph} />
     <Divider />
-    <RoomImages rooms={room_content.rooms} />
+    <LazyLoad height={200} once>
+      <RoomImages rooms={room_content.rooms} />
+    </LazyLoad>
     <Divider />
     <TitleSubtitle
       titleText={facilities.facilities_title}
@@ -36,7 +40,9 @@ const HostelTemplate = ({
     <FacilitiesList facilityItems={facilities.facility_items} />
     <Divider />
     <Location {...hostel_location} />
-    <CarouselImages galleryImages={gallery} />
+    <LazyLoad height={200} once offset={100}>
+      <CarouselImages galleryImages={gallery} />
+    </LazyLoad>
   </div>
 );
 
