@@ -34,15 +34,15 @@
   },
   "scripts": {
     "start": "react-scripts start",
+
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "postbuild":
+      "mv build/static/js/*.js pause-theme/js/prod.js && mv build/static/css/*.css pause-theme/css/prod.css",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "src/*.{js,json}": [
-      "eslint",
-      "git add"
-    ]
+    "src/*.{js,json}": ["eslint", "git add"]
   }
 }
