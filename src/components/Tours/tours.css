@@ -13,6 +13,8 @@
 }
 
 .tour-image {
+  -webkit-transform: translate3d(0, 0, 0);
+
   display: block;
   width: 350px;
   height: 200px;
