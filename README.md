@@ -13,7 +13,7 @@ found in the project at `pause-theme`
 The theme needs to be copied to over the `wp-content/themes` folder of the
 wordpress install in production.
 
-All content can be changed in wordpress.  Information regarding the content fields can be found in the folder `wordpress-content-guide`
+All content can be changed in wordpress.  Documentation regarding the content fields can be found in the folder `wordpress-content-guide`
 
 ## Developing locally
 
