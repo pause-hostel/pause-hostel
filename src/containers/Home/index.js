@@ -51,7 +51,7 @@ class Home extends Component {
           titleText={room_content.room_section_title}
           subtitleText={room_content.room_section_subtitle}
         />
-        <LazyLoad height={200} once offset={100}>
+        <LazyLoad height={200} once>
           <RoomImages rooms={room_content.rooms} />
         </LazyLoad>
 
@@ -60,7 +60,7 @@ class Home extends Component {
           titleText={tours_activities.activities_title}
           subtitleText={tours_activities.activities_subtitle}
         />
-        <LazyLoad height={200} once offset={100}>
+        <LazyLoad height={200} once>
           <Tours activityItems={tours_activities.activities} />
         </LazyLoad>
         <Divider />
@@ -69,14 +69,14 @@ class Home extends Component {
           subtitleText={facilities.facilities_subtitle}
         />
         <FacilitiesList facilityItems={facilities.facility_items} />
-        <LazyLoad height={200} once offset={100}>
+        <LazyLoad height={200} once>
           <CarouselImages galleryImages={gallery} />
         </LazyLoad>
         <TitleSubtitle
           titleText={sponsors.sponsor_title}
           subtitleText={sponsors.sponsor_subtitle}
         />
-        <LazyLoad height={200} once offset={100}>
+        <LazyLoad height={200} once>
           <Banner bannerImage={sponsors.sponsor_banner} />
         </LazyLoad>
       </div>

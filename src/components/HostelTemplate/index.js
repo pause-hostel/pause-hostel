@@ -29,7 +29,7 @@ const HostelTemplate = ({
     />
     <Contents contentText={welcome_content.welcome_paragraph} />
     <Divider />
-    <LazyLoad height={200} once offset={100}>
+    <LazyLoad height={200} once>
       <RoomImages rooms={room_content.rooms} />
     </LazyLoad>
     <Divider />

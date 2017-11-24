@@ -43,11 +43,11 @@ class About extends Component {
           titleText={about_sponsor.sponsor_title}
           subtitleText={about_sponsor.sponsor_subtitle}
         />
-        <LazyLoad height={200} once offset={100}>
+        <LazyLoad height={200} once>
           <Banner bannerImage={about_sponsor.sponsor_image_1} />
         </LazyLoad>
 
-        <LazyLoad height={200} once offset={100}>
+        <LazyLoad height={200} once>
           <Banner bannerImage={about_sponsor.sponsor_image2} />
         </LazyLoad>
       </div>
