@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import LazyLoad from 'react-lazyload';
+
 import { getHomeItems } from './redux/actions';
 import {
   Divider,
@@ -49,25 +51,34 @@ class Home extends Component {
           titleText={room_content.room_section_title}
           subtitleText={room_content.room_section_subtitle}
         />
-        <RoomImages rooms={room_content.rooms} />
+        <LazyLoad height={200} once offset={100}>
+          <RoomImages rooms={room_content.rooms} />
+        </LazyLoad>
+
         <Divider />
         <TitleSubtitle
           titleText={tours_activities.activities_title}
           subtitleText={tours_activities.activities_subtitle}
         />
-        <Tours activityItems={tours_activities.activities} />
+        <LazyLoad height={200} once offset={100}>
+          <Tours activityItems={tours_activities.activities} />
+        </LazyLoad>
         <Divider />
         <TitleSubtitle
           titleText={facilities.facilities_title}
           subtitleText={facilities.facilities_subtitle}
         />
         <FacilitiesList facilityItems={facilities.facility_items} />
-        <CarouselImages galleryImages={gallery} />
+        <LazyLoad height={200} once offset={100}>
+          <CarouselImages galleryImages={gallery} />
+        </LazyLoad>
         <TitleSubtitle
           titleText={sponsors.sponsor_title}
           subtitleText={sponsors.sponsor_subtitle}
         />
-        <Banner bannerImage={sponsors.sponsor_banner} />
+        <LazyLoad height={200} once offset={100}>
+          <Banner bannerImage={sponsors.sponsor_banner} />
+        </LazyLoad>
       </div>
     );
   }

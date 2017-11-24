@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import LazyLoad from 'react-lazyload';
+
 import { getAboutItems } from './redux/actions';
 import {
   Divider,
@@ -41,8 +43,13 @@ class About extends Component {
           titleText={about_sponsor.sponsor_title}
           subtitleText={about_sponsor.sponsor_subtitle}
         />
-        <Banner bannerImage={about_sponsor.sponsor_image_1} />
-        <Banner bannerImage={about_sponsor.sponsor_image2} />
+        <LazyLoad height={200} once offset={100}>
+          <Banner bannerImage={about_sponsor.sponsor_image_1} />
+        </LazyLoad>
+
+        <LazyLoad height={200} once offset={100}>
+          <Banner bannerImage={about_sponsor.sponsor_image2} />
+        </LazyLoad>
       </div>
     );
   }
