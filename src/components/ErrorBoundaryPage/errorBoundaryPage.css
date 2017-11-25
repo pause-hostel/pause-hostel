@@ -1,0 +1,28 @@
+.error-block {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.error-block a {
+  color: #eb5a34;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.error-image {
+  height: 200px;
+  padding: 10px;
+}
+
+@media (max-width: 400px) {
+  .error-block {
+    width: 300px;
+    margin: -230px 0 0 -150px;
+  }
+}

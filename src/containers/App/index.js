@@ -5,7 +5,13 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { getNavItems } from './redux/actions';
-import { Navigation, Footer, LoadingWrapper, NotFound } from '../../components';
+import {
+  Navigation,
+  Footer,
+  LoadingWrapper,
+  NotFound,
+  ErrorBoundaryPage,
+} from '../../components';
 import {
   ROOT,
   MEXICO_PAGE,
@@ -37,16 +43,18 @@ class App extends Component {
           <div>
             <BrowserRouter>
               <div>
-                <Navigation {...navigation_items} />
-                <Switch>
-                  <Route exact path={ROOT} component={Home} />
-                  <Route path={MEXICO_PAGE} component={Mexico} />
-                  <Route path={ABOUT_PAGE} component={About} />
-                  <Route path={BELIZE_PAGE} component={Belize} />
-                  <Route path={CONTACT_PAGE} component={Contact} />
-                  <Route component={NotFound} />
-                </Switch>
-                <Footer {...navigation_items} />
+                <ErrorBoundaryPage>
+                  <Navigation {...navigation_items} />
+                  <Switch>
+                    <Route exact path={ROOT} component={Home} />
+                    <Route path={MEXICO_PAGE} component={Mexico} />
+                    <Route path={ABOUT_PAGE} component={About} />
+                    <Route path={BELIZE_PAGE} component={Belize} />
+                    <Route path={CONTACT_PAGE} component={Contact} />
+                    <Route component={NotFound} />
+                  </Switch>
+                  <Footer {...navigation_items} />
+                </ErrorBoundaryPage>
               </div>
             </BrowserRouter>
           </div>

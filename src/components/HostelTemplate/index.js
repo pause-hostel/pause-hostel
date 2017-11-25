@@ -11,6 +11,7 @@ import {
   Contents,
   FacilitiesList,
   CarouselImages,
+  ErrorBoundaryComponent,
 } from '../';
 
 const HostelTemplate = ({
@@ -22,7 +23,9 @@ const HostelTemplate = ({
   gallery,
 }) => (
   <div className="App">
-    <PageHeader contents={hostel_banner} />
+    <ErrorBoundaryComponent>
+      <PageHeader contents={hostel_banner} />
+    </ErrorBoundaryComponent>
     <TitleSubtitle
       titleText={welcome_content.welcome_title}
       subtitleText={welcome_content.welcome_subtitle}
@@ -41,11 +44,17 @@ const HostelTemplate = ({
       titleText={facilities.facilities_title}
       subtitleText={facilities.facilities_subtitle}
     />
-    <FacilitiesList facilityItems={facilities.facility_items} />
+    <ErrorBoundaryComponent>
+      <FacilitiesList facilityItems={facilities.facility_items} />
+    </ErrorBoundaryComponent>
     <Divider />
-    <Location {...hostel_location} />
+    <ErrorBoundaryComponent>
+      <Location {...hostel_location} />
+    </ErrorBoundaryComponent>
     <LazyLoad height={200} once offset={100}>
-      <CarouselImages galleryImages={gallery} />
+      <ErrorBoundaryComponent>
+        <CarouselImages galleryImages={gallery} />
+      </ErrorBoundaryComponent>
     </LazyLoad>
   </div>
 );

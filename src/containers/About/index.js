@@ -11,6 +11,7 @@ import {
   Contents,
   Banner,
   LoadingWrapper,
+  ErrorBoundaryComponent,
 } from '../../components';
 
 class About extends Component {
@@ -27,10 +28,12 @@ class About extends Component {
     const { banner, welcome_content, about_sponsor } = this.props.aboutItems;
     return (
       <div>
-        <Banner
-          bannerImage={banner.banner_image}
-          bookButton={banner.book_button}
-        />
+        <ErrorBoundaryComponent>
+          <Banner
+            bannerImage={banner.banner_image}
+            bookButton={banner.book_button}
+          />
+        </ErrorBoundaryComponent>
         <div className="about-title">
           <TitleSubtitle
             titleText={welcome_content.welcome_title}
@@ -44,11 +47,15 @@ class About extends Component {
           subtitleText={about_sponsor.sponsor_subtitle}
         />
         <LazyLoad height={200} once>
-          <Banner bannerImage={about_sponsor.sponsor_image_1} />
+          <ErrorBoundaryComponent>
+            <Banner bannerImage={about_sponsor.sponsor_image_1} />
+          </ErrorBoundaryComponent>
         </LazyLoad>
 
         <LazyLoad height={200} once>
-          <Banner bannerImage={about_sponsor.sponsor_image2} />
+          <ErrorBoundaryComponent>
+            <Banner bannerImage={about_sponsor.sponsor_image2} />
+          </ErrorBoundaryComponent>
         </LazyLoad>
       </div>
     );
