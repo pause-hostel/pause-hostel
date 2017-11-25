@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { youtubeImage, facebookImage, callImage } from '../../images';
 
@@ -49,5 +50,18 @@ const Navigation = ({
     </div>
   </div>
 );
-
+Navigation.propTypes = {
+  navItems: PropTypes.array, //eslint-disable-line
+  nav_image: PropTypes.string,
+  facebook_url: PropTypes.string,
+  youtube_url: PropTypes.string,
+  phone: PropTypes.string,
+};
+Navigation.defaultProps = {
+  navItems: [],
+  facebook_url: '',
+  youtube_url: '',
+  phone: '',
+  nav_image: '',
+};
 export default Navigation;
