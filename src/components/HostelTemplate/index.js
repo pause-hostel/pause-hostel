@@ -30,6 +30,10 @@ const HostelTemplate = ({
     <Contents contentText={welcome_content.welcome_paragraph} />
     <Divider />
     <LazyLoad height={200} once>
+      <TitleSubtitle
+        titleText={room_content.room_section_title}
+        subtitleText={room_content.room_section_subtitle}
+      />
       <RoomImages rooms={room_content.rooms} />
     </LazyLoad>
     <Divider />

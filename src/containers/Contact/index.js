@@ -9,6 +9,8 @@ import {
   TitleSubtitle,
   Contents,
   LoadingWrapper,
+  ContactForm,
+  Divider,
 } from '../../components';
 
 class Contact extends Component {
@@ -35,6 +37,8 @@ class Contact extends Component {
           subtitleText={welcome_content.welcome_subtitle}
         />
         <Contents contentText={welcome_content.welcome_paragraph} />
+        <ContactForm />
+        <Divider />
         {Object.values(directions).map(direction => (
           <Location {...direction} />
         ))}

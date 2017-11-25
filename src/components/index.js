@@ -13,3 +13,4 @@ export { default as PageHeader } from './PageHeader';
 export { default as Location } from './Location';
 export { default as LoadingWrapper } from './Loading';
 export { default as NotFound } from './NotFound';
+export { default as ContactForm } from './ContactForm';
