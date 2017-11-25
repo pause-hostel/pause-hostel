@@ -9,7 +9,6 @@ class ContactForm extends Component {
   };
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
-    console.log(`Selected: ${selectedOption.label}`);
   };
   render() {
     return (
