@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './errorBoundaryComponent.css';
 
 const ErrorBoundaryComponentRender = () => (
@@ -14,7 +15,8 @@ class ErrorBoundaryComponent extends Component {
       hasError: false,
     };
   }
-  componentDidCatch(error, info) {
+  componentDidCatch(error) {
+    console.error(error);
     this.setState({
       hasError: true,
     });
@@ -28,3 +30,6 @@ class ErrorBoundaryComponent extends Component {
 }
 
 export default ErrorBoundaryComponent;
+ErrorBoundaryComponent.propTypes = {
+  children: PropTypes.node.isRequired,
+};

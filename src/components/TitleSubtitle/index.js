@@ -15,5 +15,9 @@ TitleSubtitle.PropTypes = {
   titleText: PropTypes.string,
   subtitleText: PropTypes.string,
 };
+TitleSubtitle.defaultProps = {
+  titleText: '',
+  subtitleText: '',
+};
 
 export default TitleSubtitle;

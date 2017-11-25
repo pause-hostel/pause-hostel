@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import './footer.css';
@@ -65,5 +66,18 @@ const Footer = ({ nav_items, nav_image, facebook_url, youtube_url, phone }) => (
     </div>
   </div>
 );
-
+Footer.propTypes = {
+  navItems: PropTypes.array, //eslint-disable-line
+  nav_image: PropTypes.string,
+  facebook_url: PropTypes.string,
+  youtube_url: PropTypes.string,
+  phone: PropTypes.string,
+};
+Footer.defaultProps = {
+  navItems: [],
+  facebook_url: '',
+  youtube_url: '',
+  phone: '',
+  nav_image: '',
+};
 export default Footer;
