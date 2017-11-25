@@ -14,3 +14,5 @@ export { default as Location } from './Location';
 export { default as LoadingWrapper } from './Loading';
 export { default as NotFound } from './NotFound';
 export { default as ContactForm } from './ContactForm';
+export { default as ErrorBoundaryPage } from './ErrorBoundaryPage';
+export { default as ErrorBoundaryComponent } from './ErrorBoundaryComponent';

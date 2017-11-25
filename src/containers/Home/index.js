@@ -16,6 +16,7 @@ import {
   Banner,
   Tours,
   LoadingWrapper,
+  ErrorBoundaryComponent,
 } from '../../components';
 
 class Home extends Component {
@@ -52,32 +53,41 @@ class Home extends Component {
           subtitleText={room_content.room_section_subtitle}
         />
         <LazyLoad height={200} once>
-          <RoomImages rooms={room_content.rooms} />
+          <ErrorBoundaryComponent>
+            <RoomImages rooms={room_content.rooms} />
+          </ErrorBoundaryComponent>
         </LazyLoad>
-
         <Divider />
         <TitleSubtitle
           titleText={tours_activities.activities_title}
           subtitleText={tours_activities.activities_subtitle}
         />
         <LazyLoad height={200} once>
-          <Tours activityItems={tours_activities.activities} />
+          <ErrorBoundaryComponent>
+            <Tours activityItems={tours_activities.activities} />
+          </ErrorBoundaryComponent>
         </LazyLoad>
         <Divider />
         <TitleSubtitle
           titleText={facilities.facilities_title}
           subtitleText={facilities.facilities_subtitle}
         />
-        <FacilitiesList facilityItems={facilities.facility_items} />
+        <ErrorBoundaryComponent>
+          <FacilitiesList facilityItems={facilities.facility_items} />
+        </ErrorBoundaryComponent>
         <LazyLoad height={200} once>
-          <CarouselImages galleryImages={gallery} />
+          <ErrorBoundaryComponent>
+            <CarouselImages galleryImages={gallery} />
+          </ErrorBoundaryComponent>
         </LazyLoad>
         <TitleSubtitle
           titleText={sponsors.sponsor_title}
           subtitleText={sponsors.sponsor_subtitle}
         />
         <LazyLoad height={200} once>
-          <Banner bannerImage={sponsors.sponsor_banner} />
+          <ErrorBoundaryComponent>
+            <Banner bannerImage={sponsors.sponsor_banner} />
+          </ErrorBoundaryComponent>
         </LazyLoad>
       </div>
     );
