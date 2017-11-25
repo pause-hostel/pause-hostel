@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './pageHeader.css';
@@ -15,9 +16,9 @@ const PageHeader = ({ contents }) => {
         />{' '}
         <div className="page-header-text-main">{title}</div>
         <div className="page-header-text-sub">{subtitle}</div>
-        <a className="book-button-page-header" href={book_button.url}>
+        <Link className="book-button-page-header" to={book_button.url}>
           {book_button.title}
-        </a>
+        </Link>
       </div>
     </div>
   );

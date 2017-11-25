@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './roomImages.css';
 
@@ -12,9 +13,9 @@ const RoomImages = ({ rooms }) => (
           alt=""
         />
         {room.book_button ? (
-          <a className="book-button-room" href={room.book_button.url}>
+          <Link className="book-button-room" to={room.book_button.url}>
             {room.book_button.title}
-          </a>
+          </Link>
         ) : null}
         <div className="room-type">{room.room_title}</div>
         {room.room_subtitle ? (
