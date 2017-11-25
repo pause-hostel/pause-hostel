@@ -17,6 +17,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "next",
     "react-scripts": "1.0.17",
+    "react-select": "^1.0.1",
     "redux": "^3.7.2",
     "redux-axios-middleware": "^4.0.0",
     "redux-fetch-middleware": "^3.0.2",
@@ -37,11 +38,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postbuild":
-      "mv build/static/js/*.js pause-theme/js/prod.js && mv build/static/css/*.css pause-theme/css/prod.css",
+    "postbuild": "mv build/static/js/*.js pause-theme/js/prod.js && mv build/static/css/*.css pause-theme/css/prod.css",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "src/*.{js,json}": ["eslint", "git add"]
+    "src/*.{js,json}": [
+      "eslint",
+      "git add"
+    ]
   }
 }
