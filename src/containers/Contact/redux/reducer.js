@@ -8,12 +8,15 @@ import {
 } from './constants';
 
 const initialState = {
-  loading: true,
-  contactItems: {},
+  loading: true, // load contact items
+  contactItems: {}, // items from api
   loadingMail: false,
-  mailResponse: false,
+  mailSuccess: false,
   mailError: '',
 };
+
+const errMsg =
+  'Error sending email please try again, or alternativly send a mail to the email located above the form.';
 
 function contactReducer(state = initialState, action) {
   switch (action.type) {
@@ -33,25 +36,28 @@ function contactReducer(state = initialState, action) {
       return {
         ...state,
         loadingMail: true,
-        mailResponse: false,
-        mailError: false,
+        mailSuccess: false,
+        mailError: '',
       };
 
     case CONTACT_SEND_MAIL_SUCCESS: {
+      const { success } = action.payload.data;
       return {
         ...state,
         loadingMail: false,
-        mailResponse: true,
-        mailError: false,
+        mailSuccess: success,
+        mailError: success ? '' : errMsg, // response is a bool (we could get a 200) but failed sent mail
       };
     }
     case CONTACT_SEND_MAIL_FAILURE: {
-      const { error } = action.paylod;
+      const { error: { response: { data } } } = action;
+      const err = data.message ? data.message : data.error;
+      console.log(err);
       return {
         ...state,
         loadingMail: false,
-        mailResponse: false,
-        error,
+        mailSuccess: false,
+        mailError: errMsg,
       };
     }
 

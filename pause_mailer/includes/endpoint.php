@@ -15,7 +15,7 @@ add_action( 'rest_api_init', 'PAUSE\EmailProxy\Endpoint\register_routes' );
  * @since 0.0.1
  */
 function register_routes() {
-	register_rest_route( 'v2/email-proxy/v1', '/email', array(
+	register_rest_route( 'wp/v2/email-proxy/v1', '/email', array(
 		'methods' => 'POST',
 		'callback' => 'PAUSE\EmailProxy\Endpoint\callback',
 	) );

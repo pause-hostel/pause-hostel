@@ -5,33 +5,71 @@ import './contactForm.css';
 
 class ContactForm extends Component {
   state = {
-    selectedOption: '',
+    name: '',
+    email: '',
+    location: '',
+    guests: '',
+    room: '',
+    message: '',
+    emailError: '',
   };
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
+  handleSelectChange = id => (selectedOption) => {
+    if (!selectedOption) {
+      return this.setState({ [id]: '' });
+    }
+    const { value } = selectedOption;
+    return this.setState({ [id]: value });
+  };
+
+  handleInputChange = id => event =>
+    this.setState({ [id]: event.target.value });
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    if (!this.state.email) {
+      return this.setState({
+        emailError: 'We need your address email when you make an inquiry',
+      });
+    }
+    return this.setState({ emailError: '' }, this.props.submitForm(this.state));
   };
   render() {
+    const { name, email, location, guests, room, message } = this.state;
     return (
       <form className="form-wrapper">
         <div>
-          <label>Full Name</label>
+          <label htmlFor="contact-name">Full Name</label>
           <div>
-            <input type="text" name="name" placeholder="Full Name" />
+            <input
+              onChange={this.handleInputChange('name')}
+              id="contact-name"
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={name}
+            />
           </div>
         </div>
         <div>
-          <label>Email</label>
-          <div>
-            <input type="email" name="email" placeholder="Email" />
+          <label htmlFor="contact-email">Email</label>
+          <div id="contact-email">
+            <input
+              onChange={this.handleInputChange('email')}
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+            />
           </div>
         </div>
         <div>
-          <label>Location</label>
+          <label htmlFor="contact-location">Location</label>
           <div>
             <Select
+              id="contact-location"
               name="location"
-              value={this.state.value}
-              onChange={this.handleChange}
+              value={location}
+              onChange={this.handleSelectChange('location')}
               className="select"
               options={[
                 { value: 'chetumal', label: 'Chetumal, Mexico' },
@@ -41,11 +79,12 @@ class ContactForm extends Component {
           </div>
         </div>
         <div>
-          <label>Guests</label>
+          <label htmlFor="contact-guests">Guests</label>
           <Select
+            id="contact-guests"
             name="guests"
-            value={this.state.value}
-            onChange={this.handleChange}
+            value={guests}
+            onChange={this.handleSelectChange('guests')}
             className="select"
             options={[
               { value: '1 person', label: '1 person' },
@@ -62,25 +101,42 @@ class ContactForm extends Component {
           />
         </div>
         <div>
-          <label>Room Type</label>
+          <label htmlFor="room-type">Room Type</label>
           <div>
-            <input type="text" name="roomType" placeholder="eg. 6 bed dorm" />
+            <input
+              onChange={this.handleInputChange('room')}
+              id="room-type"
+              type="text"
+              name="roomType"
+              placeholder="eg. 6 bed dorm"
+              value={room}
+            />
           </div>
         </div>
         <div>
-          <label>Message</label>
+          <label htmlFor="contact-message">Message</label>
           <div>
             <textarea
+              onChange={this.handleInputChange('message')}
+              id="contact-message"
               type="text"
               name="message"
               rows="10"
               cols="40"
               placeholder="Message"
+              value={message}
             />
           </div>
         </div>
         <div>
-          <button type="submit">Send</button>
+          <button type="submit" onClick={this.handleSubmit}>
+            Send
+          </button>
+          {this.props.mailSuccess ? (
+            <div> Your Message was succssefully sent </div>
+          ) : null}
+          {this.props.mailError ? <div> {this.props.mailError} </div> : null}
+          {this.props.loadingMail ? <div> Loading div </div> : null}
         </div>
       </form>
     );

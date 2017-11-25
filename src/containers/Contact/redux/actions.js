@@ -26,7 +26,7 @@ export const contactItemsFailure = error => ({
   error,
 });
 
-export const sendMail = () => ({
+export const sendMail = data => ({
   types: [
     CONTACT_SEND_MAIL,
     CONTACT_SEND_MAIL_SUCCESS,
@@ -34,7 +34,9 @@ export const sendMail = () => ({
   ],
   payload: {
     request: {
-      url: '/mail-proxy/v1/email',
+      url: '/email-proxy/v1/email',
+      method: 'POST',
+      data: { secret_key: 'its a secret', ...data },
     },
   },
 });
