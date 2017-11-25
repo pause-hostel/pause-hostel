@@ -1,0 +1,59 @@
+.form-wrapper label {
+  color: #4fa89e;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.form-wrapper {
+  position: relative;
+  margin: 0 auto;
+  background-color: #f2f1f0;
+  padding: 30px;
+  width: 70%;
+  text-align: left;
+}
+
+.form-wrapper div:not(:last-child) {
+  padding-bottom: 15px;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  position: relative;
+  color: #d9d9d8;
+  width: 90%;
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d8;
+  border-radius: 4px;
+}
+
+.select {
+  margin: 10px 0;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+button[type='submit'] {
+  margin: 8px 0;
+  padding: 15px 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border-radius: 0;
+  border: none;
+  background-color: #dc3d50;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+}
+
+button[type='submit']:hover {
+  background-color: #b03040;
+}
