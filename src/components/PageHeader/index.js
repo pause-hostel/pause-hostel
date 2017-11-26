@@ -24,8 +24,11 @@ const PageHeader = ({ contents }) => {
   );
 };
 
-PageHeader.PropTypes = {
-  pageHeaderContents: PropTypes.object,
+PageHeader.propTypes = {
+  contents: PropTypes.object, //eslint-disable-line
+};
+PageHeader.defaultProps = {
+  contents: {},
 };
 
 export default PageHeader;

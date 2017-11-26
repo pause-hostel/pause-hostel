@@ -51,14 +51,14 @@ const Navigation = ({
   </div>
 );
 Navigation.propTypes = {
-  navItems: PropTypes.array, //eslint-disable-line
+  nav_items: PropTypes.array, //eslint-disable-line
   nav_image: PropTypes.string,
   facebook_url: PropTypes.string,
   youtube_url: PropTypes.string,
   phone: PropTypes.string,
 };
 Navigation.defaultProps = {
-  navItems: [],
+  nav_items: [],
   facebook_url: '',
   youtube_url: '',
   phone: '',

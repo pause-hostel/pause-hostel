@@ -10,7 +10,6 @@ import {
   Header,
   TitleSubtitle,
   Contents,
-  RoomImages,
   FacilitiesList,
   CarouselImages,
   Banner,
@@ -33,7 +32,6 @@ class Home extends Component {
     const {
       hostels,
       welcome_content,
-      room_content,
       tours_activities,
       facilities,
       gallery,
@@ -47,16 +45,6 @@ class Home extends Component {
           subtitleText={welcome_content.welcome_subtitle}
         />
         <Contents contentText={welcome_content.welcome_paragraph} />
-        <Divider />
-        <TitleSubtitle
-          titleText={room_content.room_section_title}
-          subtitleText={room_content.room_section_subtitle}
-        />
-        <LazyLoad height={200} once>
-          <ErrorBoundaryComponent>
-            <RoomImages rooms={room_content.rooms} />
-          </ErrorBoundaryComponent>
-        </LazyLoad>
         <Divider />
         <TitleSubtitle
           titleText={tours_activities.activities_title}
