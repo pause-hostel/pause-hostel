@@ -32,7 +32,6 @@ class Home extends Component {
     const {
       hostels,
       welcome_content,
-      room_content,
       tours_activities,
       facilities,
       gallery,
