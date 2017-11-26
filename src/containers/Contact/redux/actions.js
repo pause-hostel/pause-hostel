@@ -1,3 +1,4 @@
+import config from '../../../config';
 import {
   CONTACT_ITEMS_LOAD,
   CONTACT_ITEMS_SUCCESS,
@@ -36,7 +37,7 @@ export const sendMail = data => ({
     request: {
       url: '/email-proxy/v1/email',
       method: 'POST',
-      data: { secret_key: 'its a secret', ...data },
+      data: { secret_key: config.email_secret, ...data },
     },
   },
 });

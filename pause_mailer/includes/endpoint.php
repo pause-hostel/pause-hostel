@@ -33,14 +33,17 @@ function register_routes() {
 function callback( $data ) {
 	$req = $data->get_body();
 	$email = json_decode(($req), true);
+	$clean = strtr( $email['secret_key'], ' ', '+');
+	$ascii = base64_decode( $clean );
+	 //debugger
+	 //error_log(print_r(($ascii), TRUE));
 
-
-	// // Do not send email by default. Another plugin should control the secret to success.
-	// if ( ! isset( $email['secret_key'] ) || ! $email['secret_key'] == 'testy' ) {
-	// 	return new \WP_Rest_Response( array(
-	// 		'error' => 'Invalid secret.',
-	// 	), 403 );
-	// }
+	// Replace 'testy with secret_key for emails'
+	if ( ! isset( $email['secret_key'] ) || $ascii !== 'testy' ) {
+		return new \WP_Rest_Response( array(
+			'error' => 'Invalid secret.',
+		), 403 );
+	}
 
 	$expected = array(
 		'send_to',
