@@ -16,7 +16,7 @@ const initialState = {
 };
 
 const errMsg =
-  'Error sending email please try again, or alternativly send a mail to the email located above the form.';
+  'Error sending email please try again, or alternatively send an email to the email address located above the form.';
 
 function contactReducer(state = initialState, action) {
   switch (action.type) {

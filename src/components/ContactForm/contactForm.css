@@ -21,7 +21,7 @@ input[type='text'],
 input[type='email'],
 textarea {
   position: relative;
-  color: #d9d9d8;
+  color: #626262;
   width: 90%;
   font-size: 12px;
   font-weight: lighter;
@@ -36,6 +36,7 @@ textarea {
   margin: 10px 0;
   font-size: 12px;
   font-weight: lighter;
+  padding-right: 20px;
 }
 
 button[type='submit'] {
@@ -56,4 +57,56 @@ button[type='submit'] {
 
 button[type='submit']:hover {
   background-color: #b03040;
+}
+
+.mail-success {
+  color: #4fa89e;
+  font-size: 18px;
+}
+
+.Selectable
+  .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+  background-color: #f2f1f0 !important;
+  color: #4fa89e;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: #4fa89e !important;
+  border-radius: 0;
+  padding-bottom: 8px;
+}
+
+.reset-link button {
+  border: 1px solid #d9d9d8;
+}
+
+.RangeExample {
+  font-weight: lighter;
+  font-size: 16px;
+  color: #626262;
+}
+
+.DayPicker-Caption {
+  color: #4fa89e;
+}
+
+.DayPicker-NavButton--next {
+  margin-top: 5px;
+}
+
+@media (max-width: 400px) {
+  .form-wrapper {
+    margin: none;
+    width: 100%;
+    padding: 30px 5px;
+  }
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    width: 70%;
+  }
+  .DayPicker-Month {
+    margin-right: 65px;
+    margin-left: 5px;
+  }
 }

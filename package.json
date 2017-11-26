@@ -9,6 +9,7 @@
     "lint-staged": "^4.2.1",
     "prop-types": "^15.5.10",
     "react": "^16.1.1",
+    "react-day-picker": "^7.0.0",
     "react-dom": "^16.1.1",
     "react-lazyload": "^2.3.0",
     "react-redux": "^5.0.6",
