@@ -216,9 +216,9 @@ class ContactForm extends Component {
 }
 ContactForm.propTypes = {
   mailSuccess: PropTypes.bool,
-  mailError: PropTypes.bool,
+  mailError: PropTypes.string,
   loadingMail: PropTypes.bool,
-  numberOfMonths: PropTypes.string,
+  numberOfMonths: PropTypes.number,
 };
 ContactForm.defaultProps = {
   mailSuccess: false,
