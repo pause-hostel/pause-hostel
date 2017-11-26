@@ -74,7 +74,7 @@ HostelTemplate.defaultProps = {
   hostel_location: {},
   room_content: {},
   facilities: {},
-  gallery: {},
+  gallery: [],
 };
 
 export default HostelTemplate;
