@@ -39,11 +39,11 @@ function callback( $data ) {
 	 //error_log(print_r(($ascii), TRUE));
 
 	// Replace 'testy with secret_key for emails'
-	if ( ! isset( $email['secret_key'] ) || $ascii !== 'testy' ) {
-		return new \WP_Rest_Response( array(
-			'error' => 'Invalid secret.',
-		), 403 );
-	}
+	// if ( ! isset( $email['secret_key'] ) || $ascii !== 'testy' ) {
+	// 	return new \WP_Rest_Response( array(
+	// 		'error' => 'Invalid secret.',
+	// 	), 403 );
+	// }
 
 	$expected = array(
 		'send_to',
