@@ -5,8 +5,13 @@ import './header.css';
 
 const Header = ({ contents }) => (
   <div className="header-container">
-    {Object.values(contents).map((content) => {
-      const { hostel_image, image_location, image_text, book_button } = content;
+    {Object.keys(contents).map((content) => {
+      const {
+        hostel_image,
+        image_location,
+        image_text,
+        book_button,
+      } = contents[content];
       return (
         <div
           className="header-wrapper"

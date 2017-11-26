@@ -74,9 +74,9 @@ class Contact extends Component {
           />
         </ErrorBoundaryComponent>
         <Divider />
-        {Object.values(directions).map((direction, idx) => (
+        {Object.keys(directions).map((direction, idx) => (
           <ErrorBoundaryComponent key={`direction-${idx}`}>
-            <Location {...direction} />
+            <Location {...directions[direction]} />
           </ErrorBoundaryComponent>
         ))}
       </div>
