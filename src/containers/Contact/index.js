@@ -11,6 +11,7 @@ import {
   LoadingWrapper,
   ContactForm,
   Divider,
+  ErrorBoundaryComponent,
 } from '../../components';
 
 class Contact extends Component {
@@ -23,11 +24,21 @@ class Contact extends Component {
 
   contactFromSubmit = (submission) => {
     const { email: sendToMail } = this.props.navItems.navigation_items;
-    const { name, email, message, guests, location, room } = submission;
+    const {
+      name,
+      email,
+      message,
+      guests,
+      location,
+      room,
+      dateRange,
+    } = submission;
 
     const messageToSend = ` Guests: ${guests}\n Location: ${location}\n Room: ${
       room
-    }\n Message: ${message}`;
+    }\n Check In: ${dateRange.from.toLocaleDateString()}\n Check Out: ${dateRange.to.toLocaleDateString()}\n Message: ${
+      message
+    } `;
 
     this.props.sendEmail({
       send_to: sendToMail,
@@ -54,15 +65,19 @@ class Contact extends Component {
           subtitleText={welcome_content.welcome_subtitle}
         />
         <Contents contentText={welcome_content.welcome_paragraph} />
-        <ContactForm
-          loadingMail={this.props.loadingMail}
-          mailError={this.props.mailError}
-          mailSuccess={this.props.mailSuccess}
-          submitForm={this.contactFromSubmit}
-        />
+        <ErrorBoundaryComponent>
+          <ContactForm
+            loadingMail={this.props.loadingMail}
+            mailError={this.props.mailError}
+            mailSuccess={this.props.mailSuccess}
+            submitForm={this.contactFromSubmit}
+          />
+        </ErrorBoundaryComponent>
         <Divider />
         {Object.values(directions).map((direction, idx) => (
-          <Location key={`direction-${idx}`} {...direction} />
+          <ErrorBoundaryComponent key={`direction-${idx}`}>
+            <Location {...direction} />
+          </ErrorBoundaryComponent>
         ))}
       </div>
     );
