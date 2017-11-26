@@ -1,4 +1,3 @@
-import 'core-js/es7/object';
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
