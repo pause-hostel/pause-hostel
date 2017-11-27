@@ -1,5 +1,5 @@
 const config = {
-  apiEndpoint: 'http://www.pausehostel.com/newsite/wp-json/wp/v2',
+  apiEndpoint: 'http://www.pausehostel.com/wp-json/wp/v2',
   email_secret:
     process.env.NODE_ENV === 'development'
       ? btoa('testy')
