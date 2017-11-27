@@ -25,17 +25,26 @@ We use the production api as we can only read from it which is
 `http://www.pausehostel.com/newsite/wp-json/wp/v2/`;
 
 ## Used plugins
-
+This Project has a strong dependency with the following plugins:
+ - Advanced custom fields ( used to create the components )
+ - ACF TO REST API (this will add a `acf` prop to each response which we consume)
+ - Custom post type ui - This allows us to create custom pages and endpoints to consume via the api
 ## Headless API
+
+The rest api lives at http://www.pausehostel.com/wp-json/wp/v2/
+With the following endpoint:
+ - `/navigation`
+ - `/contact`
+ - `/about`
+ - `/home`
+ - `/chetumal`
+ - `/cayecaulker`
+
 
 ## Deploying to production (WIP)
 
 Before deploying to production always make a copy of the current site. Download
 the theme via ftp, incase anything goes wrong.
-
-Make sure you have the `PAUSE_EMAIL_KEY` env var set before running the build.
-This var is needed to send emails via the pause_mailer, this secret key can be
-obtained from madies spreadsheet.
 
 To run the build: Run `npm build`.
 
@@ -52,13 +61,12 @@ To upload the theme you have two options:
 
 ## Email functionality
 
-To use the email function, please obtain the secret_key from mady. This key is
-base64_encoded before sending a email request to the php server.
+Configuration of the recipent email address must be done via the wordpress interace.
+The email address lives in the navigation page.
 
 The email functionality is managed by `/pause_mailer` which is also on the live
 deployment.
 
 If anything goes wrong with the mail functionality, you can try re-upload the
 folder to the `plugin` directory on the server, before doing so update line `42`
-in `/pause-mailer/includes/endpoint.php` with the email secret. (see madies
-spreadsheet for the secret)
+in `/pause-mailer/includes/endpoint.php` with the email secret. 
